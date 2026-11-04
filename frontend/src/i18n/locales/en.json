@@ -21,7 +21,9 @@
     "language": "Language",
     "easyMode": "Easy Mode",
     "changeLang": "Change Language",
-    "home": "Go to Main Page"
+    "home": "Go to Main Page",
+    "whatToReport": "What would you like to report?",
+    "fileReportSubtitle": "Quickly file a report on campus"
   },
   "common": {
     "cancel": "Cancel",
@@ -195,7 +197,19 @@
     "submitReportBtn": "Submit Report →",
     "submitting": "Submitting Report...",
     "reportSuccess": "Report Submitted Successfully!",
-    "reportSuccessDesc": "Your report reference is {{code}}. Automatic campus matching is active."
+    "reportSuccessDesc": "Your report reference is {{code}}. Automatic campus matching is active.",
+    "colorLabel": "Primary Color",
+    "colorPlaceholder": "e.g. Blue, Matte Black, Silver",
+    "brandLabel": "Brand or Manufacturer",
+    "brandPlaceholder": "e.g. Apple, Milton, Fastrack, HP",
+    "descLabel": "Description",
+    "descPlaceholder": "Describe where you think you left it and general appearance...",
+    "privateProofHelper": "These private details (e.g. unique marks, custom sticker placement, lock screen wallpaper) are stored securely and only accessible by you and verifying security officers.",
+    "imageSizeLimit": "PNG, JPG, WEBP up to 5MB",
+    "sensitiveProtocol": "Sensitive Belongings Protocol:",
+    "sensitiveProtocolDesc": "Items like laptops, wallets, mobile phones, and ID cards undergo campus security verification prior to claim release.",
+    "custodyLabel": "Current Custody & Safe Handover Guidance",
+    "custodyPlaceholder": "e.g. Deposited with Central Security Helpdesk (Block 34 Ground Floor)."
   },
   "claim": {
     "confidentialTitle": "Confidential Claim",
@@ -323,7 +337,21 @@
     "rejectClaim": "Reject Claim",
     "confirmHandover": "Complete Physical Handover",
     "adminReason": "Security Reason / Notes",
-    "handoverSuccess": "Handover recorded successfully."
+    "handoverSuccess": "Handover recorded successfully.",
+    "auditLogsTitle": "Security Audit Logs",
+    "loadingAudit": "Loading audit records...",
+    "noAuditEvents": "No audit events recorded.",
+    "timestamp": "Timestamp",
+    "actor": "Actor",
+    "action": "Action",
+    "targetEntity": "Target Entity",
+    "ipAddress": "IP Address",
+    "allTimeRecorded": "All-time recorded",
+    "noCategoryStats": "No category statistics yet.",
+    "claimant": "Claimant",
+    "handoverRemarksPlaceholder": "Record ID verification details, date, and collecting student signature confirmation...",
+    "adminNotesPlaceholder": "Enter audit remarks or instructions for the student...",
+    "auditReasonPlaceholder": "Audit log reason for this status modification..."
   },
   "easyMode": {
     "title": "Easy Mode & Voice Assistant",

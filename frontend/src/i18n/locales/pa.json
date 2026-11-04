@@ -21,7 +21,9 @@
     "language": "ਭਾਸ਼ਾ",
     "easyMode": "ਸੌਖਾ ਮੋਡ",
     "changeLang": "ਭਾਸ਼ਾ ਬਦਲੋ",
-    "home": "ਮੁੱਖ ਪੰਨੇ ਤੇ ਜਾਓ"
+    "home": "ਮੁੱਖ ਪੰਨੇ ਤੇ ਜਾਓ",
+    "whatToReport": "ਤੁਸੀਂ ਕੀ ਰਿਪੋਰਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?",
+    "fileReportSubtitle": "ਕੈਂਪਸ ਵਿੱਚ ਤੁਰੰਤ ਰਿਪੋਰਟ ਦਰਜ ਕਰੋ"
   },
   "common": {
     "cancel": "ਰੱਦ ਕਰੋ",
@@ -195,7 +197,19 @@
     "submitReportBtn": "ਰਿਪੋਰਟ ਜਮ੍ਹਾ ਕਰੋ →",
     "submitting": "ਜਮ੍ਹਾ ਹੋ ਰਹੀ ਹੈ...",
     "reportSuccess": "ਰਿਪੋਰਟ ਸਫਲਤਾਪੂਰਵਕ ਦਰਜ ਹੋ ਗਈ!",
-    "reportSuccessDesc": "ਤੁਹਾਡਾ ਰੈਫਰੈਂਸ ਕੋਡ {{code}} ਹੈ। ਆਟੋਮੈਟਿਕ ਮੇਲ ਕਿਰਿਆਸ਼ੀਲ ਹੈ।"
+    "reportSuccessDesc": "ਤੁਹਾਡਾ ਰੈਫਰੈਂਸ ਕੋਡ {{code}} ਹੈ। ਆਟੋਮੈਟਿਕ ਮੇਲ ਕਿਰਿਆਸ਼ੀਲ ਹੈ।",
+    "colorLabel": "ਮੁੱਖ ਰੰਗ",
+    "colorPlaceholder": "ਜਿਵੇਂ ਨੀਲਾ, ਮੈਟ ਕਾਲਾ, ਚਾਂਦੀ",
+    "brandLabel": "ਬ੍ਰਾਂਡ ਜਾਂ ਨਿਰਮਾਤਾ",
+    "brandPlaceholder": "ਜਿਵੇਂ Apple, Milton, Fastrack, HP",
+    "descLabel": "ਵੇਰਵਾ",
+    "descPlaceholder": "ਦੱਸੋ ਕਿ ਤੁਹਾਨੂੰ ਕਿੱਥੇ ਲੱਗਦਾ ਹੈ ਕਿ ਇਹ ਛੁੱਟ ਗਿਆ ਸੀ ਅਤੇ ਆਮ ਦਿੱਖ...",
+    "privateProofHelper": "ਇਹ ਨਿੱਜੀ ਵੇਰਵੇ (ਜਿਵੇਂ ਖਾਸ ਨਿਸ਼ਾਨ, ਕਸਟਮ ਸਟਿੱਕਰ, ਲਾਕ ਸਕ੍ਰੀਨ ਵਾਲਪੇਪਰ) ਸੁਰੱਖਿਅਤ ਰੱਖੇ ਜਾਂਦੇ ਹਨ ਅਤੇ ਸਿਰਫ ਤੁਹਾਡੇ ਅਤੇ ਸੁਰੱਖਿਆ ਅਧਿਕਾਰੀਆਂ ਲਈ ਉਪਲਬਧ ਹਨ।",
+    "imageSizeLimit": "PNG, JPG, WEBP ਵੱਧ ਤੋਂ ਵੱਧ 5MB",
+    "sensitiveProtocol": "ਸੰਵੇਦਨਸ਼ੀਲ ਵਸਤੂ ਸੁਰੱਖਿਆ ਪ੍ਰੋਟੋਕੋਲ:",
+    "sensitiveProtocolDesc": "ਲੈਪਟਾਪ, ਪਰਸ, ਮੋਬਾਈਲ ਫੋਨ ਅਤੇ ਆਈਡੀ ਕਾਰਡਾਂ ਵਰਗੀਆਂ ਵਸਤੂਆਂ ਦੀ ਦਾਅਵਾ ਜਾਰੀ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਸੁਰੱਖਿਆ ਜਾਂਚ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "custodyLabel": "ਮੌਜੂਦਾ ਸੁਰੱਖਿਆ ਹਿਰਾਸਤ ਅਤੇ ਸੁਰੱਖਿਅਤ ਸਪੁਰਦਗੀ ਨਿਰਦੇਸ਼",
+    "custodyPlaceholder": "ਜਿਵੇਂ ਸੈਂਟਰਲ ਸਕਿਓਰਿਟੀ ਹੈਲਪਡੈਸਕ (ਬਲਾਕ 34 ਗਰਾਊਂਡ ਫਲੋਰ) ਕੋਲ ਜਮ੍ਹਾਂ ਕਰਵਾਇਆ ਗਿਆ।"
   },
   "claim": {
     "confidentialTitle": "ਗੁਪਤ ਦਾਅਵਾ",
@@ -323,7 +337,21 @@
     "rejectClaim": "ਦਾਅਵਾ ਰੱਦ ਕਰੋ",
     "confirmHandover": "ਸਰੀਰਕ ਸਪੁਰਦਗੀ ਪੂਰੀ ਕਰੋ",
     "adminReason": "ਸੁਰੱਖਿਆ ਕਾਰਨ / ਟਿੱਪਣੀ",
-    "handoverSuccess": "ਸਪੁਰਦਗੀ ਸਫਲਤਾਪੂਰਵਕ ਦਰਜ ਹੋਈ।"
+    "handoverSuccess": "ਸਪੁਰਦਗੀ ਸਫਲਤਾਪੂਰਵਕ ਦਰਜ ਹੋਈ।",
+    "auditLogsTitle": "ਸੁਰੱਖਿਆ ਆਡਿਟ ਲੌਗ",
+    "loadingAudit": "ਆਡਿਟ ਰਿਕਾਰਡ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...",
+    "noAuditEvents": "ਕੋਈ ਆਡਿਟ ਇਵੈਂਟ ਦਰਜ ਨਹੀਂ ਹੋਇਆ।",
+    "timestamp": "ਸਮਾਂ (Timestamp)",
+    "actor": "ਕਰਤਾ (Actor)",
+    "action": "ਕਾਰਵਾਈ (Action)",
+    "targetEntity": "ਨਿਸ਼ਾਨਾ ਇਕਾਈ (Target)",
+    "ipAddress": "IP ਪਤਾ",
+    "allTimeRecorded": "ਕੁੱਲ ਦਰਜ",
+    "noCategoryStats": "ਸ਼੍ਰੇਣੀ ਅੰਕੜੇ ਅਜੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
+    "claimant": "ਦਾਅਵੇਦਾਰ",
+    "handoverRemarksPlaceholder": "ਆਈਡੀ ਤਸਦੀਕ ਵੇਰਵੇ, ਮਿਤੀ ਅਤੇ ਪ੍ਰਾਪਤਕਰਤਾ ਵਿਦਿਆਰਥੀ ਦੇ ਦਸਤਖਤ...",
+    "adminNotesPlaceholder": "ਵਿਦਿਆਰਥੀ ਲਈ ਆਡਿਟ ਟਿੱਪਣੀਆਂ ਜਾਂ ਨਿਰਦੇਸ਼ ਦਰਜ ਕਰੋ...",
+    "auditReasonPlaceholder": "ਸਥਿਤੀ ਤਬਦੀਲੀ ਲਈ ਆਡਿਟ ਲੌਗ ਕਾਰਨ..."
   },
   "easyMode": {
     "title": "ਸੌਖਾ ਮੋਡ ਅਤੇ ਵਾਇਸ ਅਸਿਸਟੈਂਟ",

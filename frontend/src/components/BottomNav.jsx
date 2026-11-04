@@ -56,8 +56,8 @@ export const BottomNav = () => {
             
             <div className="flex items-center justify-between pb-2 border-b border-slate-100">
               <div>
-                <h3 className="text-base font-bold text-slate-900">What would you like to report?</h3>
-                <p className="text-xs text-slate-500">Quickly file a report on campus</p>
+                <h3 className="text-base font-bold text-slate-900">{t("nav.whatToReport")}</h3>
+                <p className="text-xs text-slate-500">{t("nav.fileReportSubtitle")}</p>
               </div>
               <button 
                 onClick={() => setReportSheetOpen(false)}
@@ -78,8 +78,8 @@ export const BottomNav = () => {
                   <HelpCircle className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="font-bold text-sm block">I Lost Something</span>
-                  <span className="text-[11px] text-rose-600/80">Search & match</span>
+                  <span className="font-bold text-sm block">{t("nav.reportLost")}</span>
+                  <span className="text-[11px] text-rose-600/80">{t("home.step2Title") || "Search & match"}</span>
                 </div>
               </Link>
 
@@ -92,8 +92,8 @@ export const BottomNav = () => {
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="font-bold text-sm block">I Found an Item</span>
-                  <span className="text-[11px] text-teal-600/80">Safely deposit</span>
+                  <span className="font-bold text-sm block">{t("nav.reportFound")}</span>
+                  <span className="text-[11px] text-teal-600/80">{t("home.step3Title") || "Safely deposit"}</span>
                 </div>
               </Link>
             </div>

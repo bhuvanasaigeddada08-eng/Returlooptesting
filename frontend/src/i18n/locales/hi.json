@@ -21,7 +21,9 @@
     "language": "भाषा",
     "easyMode": "सरल मोड",
     "changeLang": "भाषा बदलें",
-    "home": "मुख्य पृष्ठ पर जाएं"
+    "home": "मुख्य पृष्ठ पर जाएं",
+    "whatToReport": "आप क्या रिपोर्ट करना चाहते हैं?",
+    "fileReportSubtitle": "परिसर में तुरंत रिपोर्ट दर्ज करें"
   },
   "common": {
     "cancel": "रद्द करें",
@@ -195,7 +197,19 @@
     "submitReportBtn": "रिपोर्ट जमा करें →",
     "submitting": "रिपोर्ट जमा हो रही है...",
     "reportSuccess": "रिपोर्ट सफलतापूर्वक दर्ज हो गई!",
-    "reportSuccessDesc": "आपका संदर्भ कोड {{code}} है। स्वचालित मिलान सक्रिय है।"
+    "reportSuccessDesc": "आपका संदर्भ कोड {{code}} है। स्वचालित मिलान सक्रिय है।",
+    "colorLabel": "प्राथमिक रंग",
+    "colorPlaceholder": "उदा. नीला, मैट ब्लैक, सिल्वर",
+    "brandLabel": "ब्रांड या निर्माता",
+    "brandPlaceholder": "उदा. Apple, Milton, Fastrack, HP",
+    "descLabel": "विवरण",
+    "descPlaceholder": "बताएं कि आपने इसे कहां छोड़ा था और वस्तु की सामान्य बनावट...",
+    "privateProofHelper": "ये निजी विवरण (उदा. विशेष निशान, कस्टम स्टिकर, वॉलपेपर) सुरक्षित रूप से संग्रहीत हैं और केवल आपके और सुरक्षा अधिकारियों के लिए सुलभ हैं।",
+    "imageSizeLimit": "PNG, JPG, WEBP अधिकतम 5MB",
+    "sensitiveProtocol": "संवेदनशील वस्तु सुरक्षा प्रोटोकॉल:",
+    "sensitiveProtocolDesc": "लैपटॉप, वॉलेट, मोबाइल फोन और आईडी कार्ड जैसी वस्तुओं का सत्यापन दावा जारी करने से पहले सुरक्षा द्वारा किया जाता है।",
+    "custodyLabel": "वर्तमान सुरक्षा अभिरक्षा व सुरक्षित सुपुर्दगी निर्देश",
+    "custodyPlaceholder": "उदा. केंद्रीय सुरक्षा हेल्पडेस्क (ब्लॉक 34 ग्राउंड फ्लोर) पर जमा किया गया।"
   },
   "claim": {
     "confidentialTitle": "गोपनीय दावा",
@@ -323,7 +337,21 @@
     "rejectClaim": "दावा अस्वीकृत करें",
     "confirmHandover": "भौतिक हैंडओवर पूरा करें",
     "adminReason": "सुरक्षा कारण / टिप्पणी",
-    "handoverSuccess": "हैंडओवर सफलतापूर्वक दर्ज हुआ।"
+    "handoverSuccess": "हैंडओवर सफलतापूर्वक दर्ज हुआ।",
+    "auditLogsTitle": "सुरक्षा ऑडिट लॉग",
+    "loadingAudit": "ऑडिट रिकॉर्ड लोड हो रहे हैं...",
+    "noAuditEvents": "कोई ऑडिट घटना दर्ज नहीं हुई।",
+    "timestamp": "समय (Timestamp)",
+    "actor": "कर्ता (Actor)",
+    "action": "कार्रवाई (Action)",
+    "targetEntity": "लक्षित इकाई (Target)",
+    "ipAddress": "आईपी पता",
+    "allTimeRecorded": "कुल दर्ज रिकॉर्ड",
+    "noCategoryStats": "श्रेणी आंकड़े अभी उपलब्ध नहीं हैं।",
+    "claimant": "दावेदार",
+    "handoverRemarksPlaceholder": "आईडी सत्यापन विवरण, दिनांक और प्राप्तकर्ता छात्र के हस्ताक्षर दर्ज करें...",
+    "adminNotesPlaceholder": "छात्र के लिए ऑडिट टिप्पणी या निर्देश दर्ज करें...",
+    "auditReasonPlaceholder": "स्थिति परिवर्तन का ऑडिट लॉग कारण..."
   },
   "easyMode": {
     "title": "सरल मोड और वॉइस सहायक",

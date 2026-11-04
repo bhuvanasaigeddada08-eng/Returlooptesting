@@ -112,7 +112,7 @@ export const ReportFoundPage = () => {
         <div className="p-4 mb-6 rounded-2xl bg-blue-50/70 border border-blue-200/80 text-xs text-slate-700 flex items-start gap-3">
           <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
           <div className="space-y-1">
-            <p className="font-semibold text-blue-900">Sensitive Belongings Protocol:</p>
+            <p className="font-semibold text-blue-900">{t("report.sensitiveProtocol")}</p>
             <p className="text-[11px] leading-relaxed text-blue-800">
               {t("reportFound.foundNotice")}
             </p>
@@ -273,7 +273,7 @@ export const ReportFoundPage = () => {
                 <span className="text-xs font-medium text-slate-600">
                   {selectedFile ? selectedFile.name : t("report.uploadHelp")}
                 </span>
-                <span className="text-[10px] text-slate-400">PNG, JPG, WEBP up to 5MB</span>
+                <span className="text-[10px] text-slate-400">{t("report.imageSizeLimit")}</span>
                 <input
                   type="file"
                   accept="image/png,image/jpeg,image/webp"

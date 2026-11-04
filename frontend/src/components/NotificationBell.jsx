@@ -87,13 +87,13 @@ export const NotificationBell = () => {
       {isOpen && (
         <div className="absolute right-0 mt-2 w-80 sm:w-96 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 z-50 animate-in fade-in zoom-in-95 duration-150">
           <div className="px-4 py-2.5 border-b border-slate-100 flex items-center justify-between">
-            <span className="font-semibold text-sm text-slate-900">Notifications</span>
+            <span className="font-semibold text-sm text-slate-900">{t("nav.notifications")}</span>
             {unreadCount > 0 && (
               <button
                 onClick={handleMarkAllRead}
                 className="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"
               >
-                <Check className="w-3.5 h-3.5" /> Mark all read
+                <Check className="w-3.5 h-3.5" /> {t("notifications.markAllAsRead") || "Mark all read"}
               </button>
             )}
           </div>

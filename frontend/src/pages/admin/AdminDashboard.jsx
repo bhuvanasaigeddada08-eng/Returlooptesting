@@ -49,7 +49,7 @@ export const AdminDashboard = () => {
         <div className="p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm space-y-1">
           <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">{t("admin.totalReports") || "Total Reports"}</span>
           <p className="text-2xl font-bold text-slate-900">{metrics.total_reports || 0}</p>
-          <span className="text-[11px] text-slate-500">All-time recorded</span>
+          <span className="text-[11px] text-slate-500">{t("admin.allTimeRecorded")}</span>
         </div>
 
         <div className="p-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm space-y-1">

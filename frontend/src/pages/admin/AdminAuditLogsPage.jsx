@@ -33,7 +33,7 @@ export const AdminAuditLogsPage = () => {
         <div>
           <div className="flex items-center gap-2">
             <History className="w-5 h-5 text-blue-600" />
-            <h2 className="text-xl font-bold text-slate-900 tracking-tight">Security Audit Logs</h2>
+            <h2 className="text-xl font-bold text-slate-900 tracking-tight">{t("admin.auditLogsTitle")}</h2>
           </div>
           <p className="text-xs text-slate-500 mt-1">
             Immutable log of all administrative status changes, moderation events, and handovers.
@@ -46,20 +46,20 @@ export const AdminAuditLogsPage = () => {
 
       <div className="bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
         {loading ? (
-          <div className="p-8 text-center text-xs text-slate-500">Loading audit records...</div>
+          <div className="p-8 text-center text-xs text-slate-500">{t("admin.loadingAudit")}</div>
         ) : logs.length === 0 ? (
-          <div className="p-12 text-center text-xs text-slate-500">No audit events recorded.</div>
+          <div className="p-12 text-center text-xs text-slate-500">{t("admin.noAuditEvents")}</div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
               <thead className="bg-slate-50 text-slate-500 font-semibold border-b border-slate-100">
                 <tr>
-                  <th className="py-3 px-4">Timestamp</th>
-                  <th className="py-3 px-4">Actor</th>
-                  <th className="py-3 px-4">Action</th>
-                  <th className="py-3 px-4">Target Entity</th>
+                  <th className="py-3 px-4">{t("admin.timestamp")}</th>
+                  <th className="py-3 px-4">{t("admin.actor")}</th>
+                  <th className="py-3 px-4">{t("admin.action")}</th>
+                  <th className="py-3 px-4">{t("admin.targetEntity")}</th>
                   <th className="py-3 px-4">Details / Parameters</th>
-                  <th className="py-3 px-4">IP Address</th>
+                  <th className="py-3 px-4">{t("admin.ipAddress")}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 text-slate-700">
