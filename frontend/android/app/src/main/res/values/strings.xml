@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ReturnLoop LPU</string>
+    <string name="title_activity_main">ReturnLoop LPU</string>
+    <string name="package_name">com.returnloop.lpu</string>
+    <string name="custom_url_scheme">com.returnloop.lpu</string>
+</resources>

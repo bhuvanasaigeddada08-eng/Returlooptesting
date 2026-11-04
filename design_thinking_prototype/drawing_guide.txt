@@ -1,0 +1,124 @@
+================================================================================
+INT335 DESIGN THINKING ACTION WORKBOOK — PROTOTYPE HAND-DRAWING GUIDE
+Project: ReturnLoop LPU (Privacy-Preserving Campus Lost & Found Registry)
+================================================================================
+
+This comprehensive guide is prepared specifically to help you reproduce every
+prototype screen, storyboard panel, wireframe, flowchart, and annotation in your
+INT335 Design Thinking Action Workbook with a black pen and ruler.
+
+--------------------------------------------------------------------------------
+1. RECOMMENDED DRAWING TOOLS & BEST PRACTICES
+--------------------------------------------------------------------------------
+1. Pen: 0.5mm or 0.7mm Black Gel Pen (or Micro Pigment Liner like Sakura Pigma Micron).
+2. Pencil & Eraser: HB pencil for light layout guides before inking with pen.
+3. Ruler: 15cm or 30cm transparent ruler for clean smartphone frames & button rectangles.
+4. Shading / Depth: A light grey highlighter or soft pencil cross-hatching for filled
+   headers and dark buttons (e.g. [Report Lost], [Search], or [Approve Handover]).
+5. Golden Rule: Keep it low-fidelity! Faculty members look for structural hierarchy,
+   logical user journeys, and correct labels—not artistic mastery.
+
+--------------------------------------------------------------------------------
+2. WORKBOOK ACTIVITY MAPPING (WHICH DRAWING GOES INTO WHICH ACTIVITY)
+--------------------------------------------------------------------------------
+* EMPATHIZE & DEFINE PHASES:
+  - User Storyboard (storyboard.png) -> Put in "Empathy Journey / Customer Scenario"
+  - Product Concept Summary (product_concept_summary.png) -> Put in "Problem-Solution Pitch"
+
+* IDEATE PHASE:
+  - MVP Feature List (mvp_features.png) -> Put in "Feature Brainstorming & MoSCoW Prioritization"
+  - Complete Screen Inventory (prototype_overview.png) -> Put in "Information Architecture / Sitemap"
+
+* PROTOTYPE PHASE (CORE WORKBOOK REQUIREMENT):
+  - Paper Prototype Sheet (paper_prototype.png) -> Put in "Paper Prototyping (5+ Screens)"
+  - Individual Screen Wireframes (wireframes/*.png) -> Put in "Detailed Wireframe Sketches"
+  - Screen Annotations (screen_annotations.png) -> Put in "Key Screen Interaction Analysis"
+
+* TEST PHASE:
+  - User Flowchart (user_flow.png) -> Put in "User Navigation & Test Protocol Flowchart"
+
+--------------------------------------------------------------------------------
+3. STEP-BY-STEP DRAWING ORDER FOR WORKBOOK
+--------------------------------------------------------------------------------
+We recommend following this exact 7-step sequence when drawing:
+
+STEP 1: Draw the 6-Panel Storyboard (Reference: storyboard.png)
+  - Draw a 3x2 grid of equal rectangles (approx 7cm x 6cm each).
+  - Add the panel title and emotion badge at the top of each box:
+    • Panel 1 (Setup): Neutral/Busy [Student in Block 34 Lab]
+    • Panel 2 (Problem): Frustration/Panic [Losing Laptop & Chaotic WhatsApp Chats]
+    • Panel 3 (Discovery): Hope/Relief [Discovering ReturnLoop LPU via UniMall Poster]
+    • Panel 4 (Action): Focused/Confident [Logging In & Publishing 5-Trait Report]
+    • Panel 5 (Experience): Delight/Surprise [Instant 88% Match Notification & Claim]
+    • Panel 6 (Resolution): Joy/Gratitude [Official Security Handover at UniMall]
+  - Use simple stick figures or outline silhouettes. Use speech bubbles for key dialogues.
+
+STEP 2: Draw the User Flow Diagram (Reference: user_flow.png)
+  - Start at the top center with an Oval: [START: Student Opens ReturnLoop].
+  - Use Rectangles for pages & user inputs (Landing, Search, Report Lost, Submit Claim).
+  - Use Diamonds for system decisions:
+    • Decision 1: [User Authenticated via LPU Email?] -> (No: Redirect to Login, Yes: Continue).
+    • Decision 2: [Found in Live Registry?] -> (Yes: Click Listing, No: Publish Lost Report).
+    • Decision 3: [5-Trait Match Score >= 75%?] -> (Yes: Trigger Push Notif, No: Background Polling).
+    • Decision 4: [Admin Handover Proof Matched?] -> (Yes: Release Item & Handover OTP, No: Reject / Request More Proof).
+  - Finish at the bottom with an Oval: [END: Item Safely Reunited].
+
+STEP 3: Draw the 5-Screen Paper Prototype (Reference: paper_prototype.png)
+  - Draw 5 vertical smartphone frames (width ~5cm, height ~10cm) side by side:
+    • Frame 1: Screen 01 - Landing Page (Hero banner, Search Bar, Report Buttons, Stats)
+    • Frame 2: Screen 02 - Report Lost (Form fields: Title, Category, Color, Location, Secret Proof)
+    • Frame 3: Screen 04 - Explore Listings (Filter pills, 4 item cards with photo boxes & badges)
+    • Frame 4: Screen 05 - Item Details & Match Engine (Trait comparison box showing 88% Match score)
+    • Frame 5: Screen 06 - Ownership Claim & Security (Reg ID, serial verification, Anti-fraud note)
+  - Draw directional arrows with labels connecting:
+    Frame 1 -> Frame 2 -> Frame 4 -> Frame 5.
+
+STEP 4: Draw the Three Key Screen Annotations (Reference: screen_annotations.png)
+  - Draw 3 large detailed screens (width ~8cm, height ~11cm).
+  - Surrounding each screen, draw callout arrows pointing to key UI elements with notes:
+    • Callout A: Primary User Action
+    • Callout B: Key Interface Elements & Form Inputs
+    • Callout C: Success Response (What happens when action succeeds)
+    • Callout D: Error State & Recovery (Missing required field, 404, or false claim flag)
+    • Callout E: Next Navigation Screen
+
+STEP 5: Draw the MVP Features & Roadmap (Reference: mvp_features.png)
+  - Draw a two-column card comparison:
+    • Left Card (10 Candidate Ideas): Draw 10 bulleted checkboxes.
+    • Right Card (Top 3 Core MVP Features): Draw 3 highlighted rectangular cards:
+      1. Privacy-Preserving 5-Trait Campus Registry
+      2. Automated Algorithmic Trait Matching (Category, Brand, Color, Block, Time)
+      3. Zero-Trust Security Handover Protocol
+    • Bottom Card (Version 2.0 Roadmap): AI Visual Recognition, Geo-Fencing, DigiLocker Auth.
+
+STEP 6: Draw the Product Concept Summary (Reference: product_concept_summary.png)
+  - Draw a one-page structured executive dashboard containing 6 blocks:
+    • Header: ReturnLoop LPU (Lovely Professional University)
+    • Problem Statement: WhatsApp group chaos, public phone number leaks, zero verification.
+    • Solution: Centralized, privacy-safe university lost-property network.
+    • Target Audience: 35,000+ LPU Students, Faculty, Lab Technicians, Campus Security.
+    • Core Features & ₹0 Local Architecture.
+    • Testing Methodology: Wizard-of-Oz simulation, 20-student usability benchmark.
+
+STEP 7: Draw the Digital Wireframes (Reference: wireframes/01_landing_page.png to 10_admin_claims_page.png)
+  - If your workbook has individual full-page wireframe templates, draw each of the 10
+    standalone screens using the individual images inside the `wireframes/` folder.
+  - Follow the clean black/white/grey styling: solid rectangles for cards, pill outlines
+    for category filters, and clean sans-serif handwriting.
+
+--------------------------------------------------------------------------------
+4. HELPFUL PEN-DRAWING SHORTCUTS FOR FASTER DRAWING
+--------------------------------------------------------------------------------
+1. Placeholder Photos: Draw a rectangle with an "X" through it or a dashed box with
+   text "[ Photo ]".
+2. Paragraphs: Draw 3 or 4 horizontal parallel straight lines instead of writing every word.
+3. Dropdown Menus: Draw a rectangle with a small downward triangle [ v ] on the right side.
+4. Buttons: Draw a rounded rectangle with bold uppercase text e.g. [ SUBMIT CLAIM -> ].
+5. Badges: Draw a pill oval with text: [ LOST ] in red outline, [ FOUND ] in green outline.
+6. Icons:
+   - Search: Small circle with a diagonal tail.
+   - Home: Triangle roof over a square.
+   - Bell / Notifications: Small bell shape or circle with count.
+   - Plus / Report: Simple "+" inside a solid black circle.
+================================================================================
+

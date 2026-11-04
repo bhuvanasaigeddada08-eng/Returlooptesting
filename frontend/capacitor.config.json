@@ -1,0 +1,10 @@
+{
+  "appId": "com.returnloop.lpu",
+  "appName": "ReturnLoop LPU",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  }
+}

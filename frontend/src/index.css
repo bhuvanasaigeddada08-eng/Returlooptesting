@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    font-family: 'Inter', 'Noto Sans Telugu', 'Noto Sans Devanagari', 'Noto Sans Gurmukhi', 'Noto Sans Malayalam', 'Noto Sans Tamil', 'Noto Sans Kannada', system-ui, -apple-system, sans-serif;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white min-h-screen;
+    font-family: 'Inter', 'Noto Sans Telugu', 'Noto Sans Devanagari', 'Noto Sans Gurmukhi', 'Noto Sans Malayalam', 'Noto Sans Tamil', 'Noto Sans Kannada', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Prevent automatic iOS / mobile browser zoom on field focus only on small touch screens */
+@media (max-width: 639px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Safe area insets for notched phones & Android navigation bars */
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 1rem);
+}
+.pt-safe {
+  padding-top: max(env(safe-area-inset-top, 0px), 0.5rem);
+}
+
+/* Ensure mobile bottom navigation only ever displays on mobile touch devices */
+@media (min-width: 640px) {
+  .mobile-bottom-nav {
+    display: none !important;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .mobile-bottom-nav {
+    display: none !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Easy Mode Accessibility Styles */
+body.easy-mode-active {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75;
+}
+body.easy-mode-active button,
+body.easy-mode-active input,
+body.easy-mode-active textarea,
+body.easy-mode-active select {
+  font-size: 1.05rem !important;
+  min-height: 48px;
+}
+body.easy-mode-active h1 {
+  font-size: 1.75rem !important;
+}
+body.easy-mode-active h2 {
+  font-size: 1.45rem !important;
+}
+body.easy-mode-active p,
+body.easy-mode-active span {
+  letter-spacing: 0.015em;
+}
+
+/* Glassmorphism helpers */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+/* Hide scrollbar for horizontal chip bars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
