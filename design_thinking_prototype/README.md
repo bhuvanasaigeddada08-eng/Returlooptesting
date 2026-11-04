@@ -77,4 +77,3 @@ design_thinking_prototype/
 - **Zero-Trust Privacy Protocol:** No personal phone numbers or WhatsApp accounts exposed. Ownership verified via private traits (serial number endings, custom stickers, desktop wallpaper).
 - **5-Trait Algorithmic Matching:** Evaluates Category, Brand, Color, Location, and Time window with confidence scoring.
 - **₹0-Cost Local Architecture:** Fully client-side and lightweight Flask/SQLite backend requiring zero external cloud subscriptions.
-

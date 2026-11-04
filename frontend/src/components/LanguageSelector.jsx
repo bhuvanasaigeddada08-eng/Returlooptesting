@@ -15,12 +15,13 @@ export const LanguageSelector = ({ variant = "pill", className = "" }) => {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className={`p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition flex items-center gap-1.5 cursor-pointer ${className}`}
+          className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border border-slate-200/90 bg-white/90 shadow-xs hover:bg-slate-50 text-slate-800 text-xs font-bold transition cursor-pointer active:scale-95 ${className}`}
           title={t("nav.changeLang") || "Change Language"}
           aria-label={t("nav.changeLang") || "Change Language"}
         >
-          <Globe className="w-4 h-4 text-blue-600" />
-          <span className="text-xs font-bold text-slate-800">{currentLang.nativeName}</span>
+          <span className="text-xs" role="img" aria-hidden="true">{currentLang.flag}</span>
+          <span className="font-extrabold text-slate-900">{currentLang.nativeName}</span>
+          <ChevronDown className="w-3 h-3 text-slate-400" />
         </button>
       ) : (
         <button

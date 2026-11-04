@@ -36,14 +36,11 @@ class Config:
     SUPABASE_STORAGE_BUCKET = os.getenv("SUPABASE_STORAGE_BUCKET", "returnloop-public")
     SUPABASE_PRIVATE_BUCKET = os.getenv("SUPABASE_PRIVATE_BUCKET", "returnloop-private")
     
-    # CORS - Allow any local/LAN IP and capacitor origin in dev
-    _raw_cors = os.getenv("CORS_ORIGINS", "")
-    if _raw_cors:
-        CORS_ORIGINS = [origin.strip() for origin in _raw_cors.split(",")]
-    else:
-        import re
-        CORS_ORIGINS = [re.compile(r"^https?://.*"), "capacitor://localhost"]
-
+    # CORS
+    CORS_ORIGINS = os.getenv(
+        "CORS_ORIGINS", 
+        "http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,capacitor://localhost,http://localhost"
+    ).split(",")
     
     # Dev Admin Provisioning
     DEV_ADMIN_EMAIL = os.getenv("DEV_ADMIN_EMAIL", "admin@returnloop.lpu.in")

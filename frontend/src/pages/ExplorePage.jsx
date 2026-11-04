@@ -11,6 +11,7 @@ import StatusBadge from "../components/StatusBadge";
 import EmptyState from "../components/EmptyState";
 import { CardSkeleton } from "../components/LoadingSkeleton";
 import { CATEGORIES, CAMPUS_LOCATIONS } from "../utils/constants";
+import TranslatedText from "../components/TranslatedText";
 
 export const ExplorePage = () => {
   const { t } = useTranslation();
@@ -369,7 +370,9 @@ export const ExplorePage = () => {
                       <span className="font-mono text-xs text-slate-400">{item.reference_code}</span>
                       <span className="text-xs text-slate-500">• {t(`categories.${item.category}`, item.category)}</span>
                     </div>
-                    <h3 className="font-semibold text-slate-900 text-base">{item.title}</h3>
+                    <h3 className="font-semibold text-slate-900 text-base">
+                      <TranslatedText text={item.title} />
+                    </h3>
                     <div className="flex items-center gap-4 text-xs text-slate-500 mt-1">
                       <span className="flex items-center gap-1">
                         <MapPin className="w-3.5 h-3.5 text-slate-400" />

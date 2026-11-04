@@ -199,3 +199,4 @@ def translate_endpoint():
             results[t] = translate_single(t, target_lang)
 
     return jsonify({"translations": results, "target_lang": target_lang})
+

@@ -11,6 +11,7 @@ import EmptyState from "../components/EmptyState";
 import ConfirmDialog from "../components/ConfirmDialog";
 import { TableRowSkeleton } from "../components/LoadingSkeleton";
 import { API_BASE_URL } from "../utils/constants";
+import TranslatedText from "../components/TranslatedText";
 
 export const MyReportsAndClaimsPage = () => {
   const { t } = useTranslation();
@@ -180,7 +181,7 @@ export const MyReportsAndClaimsPage = () => {
                           to={`/items/${report.id}`}
                           className="font-bold text-slate-900 text-base hover:text-blue-600 transition block"
                         >
-                          {report.title}
+                          <TranslatedText text={report.title} />
                         </Link>
                         <p className="text-xs text-slate-500">
                           {t(`locations.${report.general_location}`, report.general_location)} • {report.event_date}
@@ -263,7 +264,7 @@ export const MyReportsAndClaimsPage = () => {
                           to={`/items/${report.id}`}
                           className="font-bold text-slate-900 text-base hover:text-teal-600 transition block"
                         >
-                          {report.title}
+                          <TranslatedText text={report.title} />
                         </Link>
                         <p className="text-xs text-slate-500">
                           {t(`locations.${report.general_location}`, report.general_location)} • {report.event_date}
@@ -321,7 +322,9 @@ export const MyReportsAndClaimsPage = () => {
                   </div>
 
                   <div>
-                    <h3 className="font-bold text-slate-900 text-base">{claim.item_title}</h3>
+                    <h3 className="font-bold text-slate-900 text-base">
+                      <TranslatedText text={claim.item_title} />
+                    </h3>
                     <p className="text-xs text-slate-600 mt-1 line-clamp-2">
                       <span className="font-semibold text-slate-700">{t("claim.proofLabel")}:</span>{" "}
                       {claim.private_ownership_explanation}

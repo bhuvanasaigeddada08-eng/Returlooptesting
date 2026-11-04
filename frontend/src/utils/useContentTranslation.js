@@ -100,3 +100,4 @@ export function useContentTranslation(content = {}) {
 }
 
 export default useContentTranslation;
+
