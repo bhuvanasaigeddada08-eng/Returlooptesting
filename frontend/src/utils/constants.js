@@ -1,7 +1,13 @@
-export const API_BASE_URL = 
-  import.meta.env.VITE_API_BASE_URL !== undefined 
-    ? import.meta.env.VITE_API_BASE_URL 
-    : "";
+let rawBase = import.meta.env.VITE_API_BASE_URL;
+if (rawBase) {
+  rawBase = rawBase.replace(/\/api\/?$/, "").replace(/\/+$/, "");
+} else if (typeof window !== "undefined" && !window.location.hostname.includes("localhost")) {
+  rawBase = "https://returnloop-backend.onrender.com";
+} else {
+  rawBase = "";
+}
+
+export const API_BASE_URL = rawBase;
 
 export const CATEGORIES = [
   "Electronics",

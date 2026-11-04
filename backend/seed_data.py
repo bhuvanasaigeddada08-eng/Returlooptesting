@@ -35,6 +35,7 @@ def seed_database():
 
         # 2. Create Students
         students = [
+            User(email="bhuvanasaigeddada3@gmail.com", display_name="Bhuvanasai", role="student", phone="9876543219"),
             User(email="aarav.sharma@lpu.in", display_name="Aarav Sharma", role="student", phone="9876543210"),
             User(email="priya.patel@lpu.in", display_name="Priya Patel", role="student", phone="9876543211"),
             User(email="rohan.verma@lpu.in", display_name="Rohan Verma", role="student", phone="9876543212"),
@@ -42,7 +43,10 @@ def seed_database():
             User(email="karan.singh@lpu.in", display_name="Karan Singh", role="student", phone="9876543214"),
         ]
         for s in students:
-            s.set_password("StudentPass123!")
+            if s.email == "bhuvanasaigeddada3@gmail.com":
+                s.set_password("Bitsat@26")
+            else:
+                s.set_password("StudentPass123!")
             db.session.add(s)
         
         db.session.commit()
