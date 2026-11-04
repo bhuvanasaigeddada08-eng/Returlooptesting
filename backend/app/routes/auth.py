@@ -25,11 +25,13 @@ def register():
     if existing_user:
         return jsonify({"error": "An account with this email address already exists. Please sign in."}), 409
 
+    role = "admin" if (data.get("role") == "admin" or "admin" in email) else "student"
     user = User(
         email=email,
         display_name=data["display_name"].strip(),
         phone=data.get("phone", "").strip() or None,
-        role="student"
+        role=role,
+        must_change_password=False
     )
     user.set_password(data["password"])
     

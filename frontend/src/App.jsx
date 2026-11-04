@@ -28,6 +28,26 @@ import AdminItemsPage from "./pages/admin/AdminItemsPage";
 import AdminClaimsPage from "./pages/admin/AdminClaimsPage";
 import AdminAuditLogsPage from "./pages/admin/AdminAuditLogsPage";
 
+// Root Gate: Without login, no access - immediately redirects to /login.
+// If already logged in, takes admin to /admin and student to /dashboard.
+const RootRedirect = () => {
+  const { isAuthenticated, user, loading } = useAuth();
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-50">
+        <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
+  if (user?.role === "admin") {
+    return <Navigate to="/admin" replace />;
+  }
+  return <Navigate to="/dashboard" replace />;
+};
+
 // Protected Route Guard
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
@@ -55,13 +75,28 @@ export const App = () => {
         <Routes>
           {/* Public & Student Routes in MainLayout */}
           <Route element={<MainLayout />}>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/explore" element={<ExplorePage />} />
-            <Route path="/items/:id" element={<ItemDetailsPage />} />
+            {/* Root redirects to Login (or Dashboard/Admin if already authenticated) */}
+            <Route path="/" element={<RootRedirect />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
 
-            {/* Protected Student Routes */}
+            {/* Protected Student & Exploration Routes - Require Login */}
+            <Route
+              path="/explore"
+              element={
+                <ProtectedRoute>
+                  <ExplorePage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/items/:id"
+              element={
+                <ProtectedRoute>
+                  <ItemDetailsPage />
+                </ProtectedRoute>
+              }
+            />
             <Route
               path="/dashboard"
               element={

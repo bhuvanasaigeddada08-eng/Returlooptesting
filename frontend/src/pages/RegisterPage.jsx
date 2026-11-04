@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { User, Mail, Lock, Phone, Eye, EyeOff, ArrowRight, AlertCircle, CheckCircle2 } from "lucide-react";
+import { User, Mail, Lock, Phone, Eye, EyeOff, ArrowRight, AlertCircle, CheckCircle2, Shield } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
 export const RegisterPage = () => {
@@ -11,7 +11,8 @@ export const RegisterPage = () => {
     email: "",
     phone: "",
     password: "",
-    confirm_password: ""
+    confirm_password: "",
+    role: "student"
   });
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -49,13 +50,18 @@ export const RegisterPage = () => {
 
     try {
       setLoading(true);
-      await register({
+      const res = await register({
         display_name: formData.display_name.trim(),
         email: formData.email.trim().toLowerCase(),
         phone: formData.phone.trim() || undefined,
-        password: formData.password
+        password: formData.password,
+        role: formData.role
       });
-      navigate("/dashboard");
+      if (formData.role === "admin" || res?.user?.role === "admin") {
+        navigate("/admin");
+      } else {
+        navigate("/dashboard");
+      }
     } catch (err) {
       setErrorMessage(err.message || "Registration failed.");
     } finally {
@@ -66,7 +72,7 @@ export const RegisterPage = () => {
   return (
     <div className="max-w-md mx-auto my-6 sm:my-10">
       <div className="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-8 shadow-sm">
-        <div className="text-center space-y-1 mb-8">
+        <div className="text-center space-y-1 mb-6">
           <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 border border-teal-100 flex items-center justify-center mx-auto mb-3">
             <User className="w-6 h-6" />
           </div>
@@ -84,6 +90,43 @@ export const RegisterPage = () => {
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Account Role Selector */}
+          <div>
+            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+              Account Type / Role
+            </label>
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                type="button"
+                onClick={() => setFormData(prev => ({ ...prev, role: "student" }))}
+                className={`py-2 px-3 rounded-xl border text-xs font-semibold flex items-center justify-center gap-1.5 transition cursor-pointer ${
+                  formData.role === "student"
+                    ? "bg-teal-50 border-teal-500 text-teal-800 ring-1 ring-teal-500 shadow-sm"
+                    : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
+                }`}
+              >
+                <User className="w-3.5 h-3.5" />
+                Student
+              </button>
+              <button
+                type="button"
+                onClick={() => setFormData(prev => ({ ...prev, role: "admin" }))}
+                className={`py-2 px-3 rounded-xl border text-xs font-semibold flex items-center justify-center gap-1.5 transition cursor-pointer ${
+                  formData.role === "admin"
+                    ? "bg-blue-50 border-blue-500 text-blue-800 ring-1 ring-blue-500 shadow-sm"
+                    : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
+                }`}
+              >
+                <Shield className="w-3.5 h-3.5" />
+                Campus Admin
+              </button>
+            </div>
+            {formData.role === "admin" && (
+              <p className="text-[11px] text-blue-600 mt-1.5 bg-blue-50/60 p-2 rounded-lg border border-blue-100">
+                🛡️ Campus Admin has full access to moderate all lost & found items, approve claims, and audit logs.
+              </p>
+            )}
+          </div>
           <div>
             <label className="block text-xs font-semibold text-slate-700 mb-1.5">
               {t("auth.nameLabel")}

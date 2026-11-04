@@ -13,6 +13,7 @@ ENV/
 backend/instance/
 backend/uploads/*
 !backend/uploads/.gitkeep
+!backend/uploads/item_*.jpg
 backend/test_uploads/
 .pytest_cache/
 .env

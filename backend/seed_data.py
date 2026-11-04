@@ -27,7 +27,7 @@ def seed_database():
             email=app.config.get("DEV_ADMIN_EMAIL", "admin@returnloop.lpu.in"),
             display_name="Campus Security Chief",
             role="admin",
-            must_change_password=True,
+            must_change_password=False,
             phone="01824-517000"
         )
         admin.set_password(app.config.get("DEV_ADMIN_PASSWORD", "AdminPass123!"))

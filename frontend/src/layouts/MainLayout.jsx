@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BottomNav from "../components/BottomNav";
-import EasyModeVoiceAssistant from "../components/EasyModeVoiceAssistant";
 
 export const MainLayout = () => {
   return (
@@ -14,7 +13,6 @@ export const MainLayout = () => {
       </main>
       <Footer />
       <BottomNav />
-      <EasyModeVoiceAssistant />
     </div>
   );
 };

@@ -7,7 +7,6 @@ import {
 import { useAuth } from "../context/AuthContext";
 import Navbar from "../components/Navbar";
 import BottomNav from "../components/BottomNav";
-import EasyModeVoiceAssistant from "../components/EasyModeVoiceAssistant";
 
 export const AdminLayout = () => {
   const { t } = useTranslation();
@@ -98,7 +97,6 @@ export const AdminLayout = () => {
         </div>
       </div>
       <BottomNav />
-      <EasyModeVoiceAssistant />
     </div>
   );
 };
