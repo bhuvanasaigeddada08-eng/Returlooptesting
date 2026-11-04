@@ -29,7 +29,7 @@ import AdminClaimsPage from "./pages/admin/AdminClaimsPage";
 import AdminAuditLogsPage from "./pages/admin/AdminAuditLogsPage";
 
 // Root Gate: Without login, no access - immediately redirects to /login.
-// If already logged in, takes admin to /admin and student to /dashboard.
+// If already logged in, takes admin to /admin and student to /explore.
 const RootRedirect = () => {
   const { isAuthenticated, user, loading } = useAuth();
   if (loading) {
@@ -45,7 +45,7 @@ const RootRedirect = () => {
   if (user?.role === "admin") {
     return <Navigate to="/admin" replace />;
   }
-  return <Navigate to="/dashboard" replace />;
+  return <Navigate to="/explore" replace />;
 };
 
 // Protected Route Guard

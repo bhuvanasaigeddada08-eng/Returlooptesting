@@ -1,44 +1,43 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Globe } from "lucide-react";
+import { Globe, ChevronDown } from "lucide-react";
 import { getCurrentLanguage } from "../i18n";
+import LanguageSelectorModal from "./LanguageSelectorModal";
 
 export const LanguageSelector = ({ variant = "pill", className = "" }) => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
   const currentLang = getCurrentLanguage();
 
-  const handleDirectRedirectToMainPage = () => {
-    navigate("/");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  if (variant === "compact") {
-    return (
-      <button
-        type="button"
-        onClick={handleDirectRedirectToMainPage}
-        className={`p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition flex items-center gap-1.5 cursor-pointer ${className}`}
-        title={t("nav.changeLang") || "Language - Main Page"}
-        aria-label={t("nav.changeLang") || "Language - Main Page"}
-      >
-        <Globe className="w-4 h-4 text-blue-600" />
-        <span className="text-xs font-bold text-slate-800">{currentLang.nativeName}</span>
-      </button>
-    );
-  }
-
   return (
-    <button
-      type="button"
-      onClick={handleDirectRedirectToMainPage}
-      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold shadow-xs hover:border-slate-300 transition cursor-pointer ${className}`}
-      title={t("nav.changeLang") || "Language - Main Page"}
-    >
-      <span className="text-sm" role="img" aria-hidden="true">{currentLang.flag}</span>
-      <span className="font-bold text-slate-900">{currentLang.nativeName}</span>
-    </button>
+    <>
+      {variant === "compact" ? (
+        <button
+          type="button"
+          onClick={() => setIsOpen(true)}
+          className={`p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition flex items-center gap-1.5 cursor-pointer ${className}`}
+          title={t("nav.changeLang") || "Change Language"}
+          aria-label={t("nav.changeLang") || "Change Language"}
+        >
+          <Globe className="w-4 h-4 text-blue-600" />
+          <span className="text-xs font-bold text-slate-800">{currentLang.nativeName}</span>
+        </button>
+      ) : (
+        <button
+          type="button"
+          onClick={() => setIsOpen(true)}
+          className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold shadow-xs hover:border-slate-300 transition cursor-pointer ${className}`}
+          title={t("nav.changeLang") || "Change Language"}
+        >
+          <Globe className="w-3.5 h-3.5 text-blue-600" />
+          <span className="font-bold text-slate-900">{currentLang.nativeName}</span>
+          <ChevronDown className="w-3 h-3 text-slate-400" />
+        </button>
+      )}
+
+      {/* Language Selection Modal */}
+      <LanguageSelectorModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+    </>
   );
 };
 

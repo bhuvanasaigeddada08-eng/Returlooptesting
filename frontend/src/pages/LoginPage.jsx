@@ -52,7 +52,7 @@ export const LoginPage = () => {
       } else if (res.user?.role === "admin") {
         navigate("/admin");
       } else {
-        navigate(from);
+        navigate("/explore");
       }
     } catch (err) {
       if (err.message && err.message.toLowerCase().includes("failed to fetch")) {
