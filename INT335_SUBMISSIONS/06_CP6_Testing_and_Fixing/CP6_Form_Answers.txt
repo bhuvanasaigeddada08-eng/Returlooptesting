@@ -1,0 +1,28 @@
+================================================================================
+INT335 DESIGN THINKING — CHECKPOINT 6 (CP6) SUBMISSION ANSWERS
+Google Form Link: forms.gle/3whaWAWZ3s6otVJ3A
+================================================================================
+
+[FIELD: Number of Real Users Tested]
+5 real users tested the prototype initially, followed by 2 additional users who tested the revised prototype.
+
+[FIELD: Testing Process Followed]
+Followed the strict "Silent Observer" rule: handed the device to participants, gave neutral task prompts without instructions or explanations, observed hesitations and errors, and recorded feedback immediately into a Feedback Capture Matrix.
+
+[FIELD: Key Issues Identified & Severity Rating]
+1. [HIGH SEVERITY] Language Accessibility: Non-native English students and campus ground staff hesitated with complex English form terms.
+2. [HIGH SEVERITY] Mobile Header Clipping: On iOS mobile browsers, opening modal dialogs caused clipping against the sticky header.
+3. [MEDIUM SEVERITY] Photo Upload Confusion: Users thought uploading a photo was mandatory, causing friction if camera access was unavailable.
+4. [MEDIUM SEVERITY] Handover Proof: Claimants needed a concrete reference receipt code to show guards at the security gate.
+
+[FIELD: Concrete Changes Made Based on User Evidence]
+1. Multi-Language Localization: Implemented real-time translation into 7 Indian languages (Hindi, Punjabi, Telugu, Tamil, Kannada, Malayalam, English).
+2. Mobile Portal Architecture: Migrated modal dialogs to React `createPortal` with iOS safe-area insets (`env(safe-area-inset-top)`), eliminating mobile clipping.
+3. Smart Photo Fallback: Enhanced backend with automated category-driven fallback so items without photos display high-resolution realistic category images instead of broken placeholders.
+4. Standardized Claim Reference Codes: Implemented tracking codes (e.g. `RL-LOST-2026-CC0709` / `RL-CLM-2026-5AC0D0`) for rapid gate verification.
+
+[FIELD: Proof of Re-Test with 2 Users]
+Re-tested with Participant T1 and Participant T4.
+- Participant T1 easily selected Hindi and completed the claim in 42 seconds (compared to 110 seconds previously).
+- Participant T4 verified that the reference code was immediately visible on the dashboard and claim receipt.
+All 4 identified issues were validated as resolved.

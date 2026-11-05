@@ -1,0 +1,40 @@
+================================================================================
+INT335 DESIGN THINKING — CHECKPOINT 1 (CP1) SUBMISSION ANSWERS
+Google Form Link: forms.gle/3whaWAWZ3s6otVJ3A
+================================================================================
+
+[FIELD: Project ID]
+P04
+
+[FIELD: Project Title]
+Lost on a 600-Acre Campus: Rethinking Lost and Found
+
+[FIELD: Domain]
+Campus Services / Digital Student Services
+
+[FIELD: Problem Space (v1) — No Technology Named]
+Students, faculty, and administrative staff who misplace vital belongings—such as student smart ID cards, laptops, calculators, vehicle keys, and wallets—across LPU's 600-acre campus face a high rate of permanent loss, extreme academic anxiety, and privacy risks. Simultaneously, honest finders and security personnel who discover items have no standardized, trustworthy, or low-effort channel to report or hand over recovered items, leading to unclaimed physical stockpiles at security posts and unmoderated social media posts where personal contact numbers are exposed.
+
+[FIELD: Target User Group — Specific, not "all students"]
+LPU hostellers and day scholars who carry high-value items across academic blocks (Blocks 32, 34, 36, Central Library, UniMall) and campus security guards/help-desk staff stationed at gate counters who accumulate unclaimed items.
+
+[FIELD: Field Sites the Team Can Physically Reach]
+1. Central Library Ground Floor Security Desk and 2nd Floor Reading Room
+2. Block 34 (Computer Science Building) Ground Floor Foyer & Security Post
+3. UniMall Food Court & Central Courtyard Seating Area
+
+[FIELD: The 5 Mandatory Approval Questions]
+1. Can you reach it?
+YES — Our team members attend classes daily in Block 34, study in Central Library, and visit UniMall; we can physically observe and interview students and staff in person.
+
+2. Who exactly?
+YES — (1) Students who have lost or found items in the last 6 months, and (2) Campus security guards and library desk caretakers managing lost property boxes.
+
+3. Problem, not solution?
+YES — The problem describes the communication void, anxiety, false claims, and privacy exposure during item loss, without prescribing any software, website, or hardware.
+
+4. Safe to research?
+YES — No student ID numbers, passwords, room numbers, or financial details are collected. Verbal consent is obtained before all conversations, and interviews are conducted in the participant's preferred language (English, Hindi, Punjabi).
+
+5. Can you prototype it?
+YES — Low-fidelity paper wireframes, claim forms, and physical cardboard drop-point mockups can be drawn and role-played in a single afternoon sitting.

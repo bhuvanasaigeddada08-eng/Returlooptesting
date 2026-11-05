@@ -1,0 +1,25 @@
+================================================================================
+INT335 DESIGN THINKING — CHECKPOINT 2 (CP2) SUBMISSION ANSWERS
+Google Form Link: forms.gle/3whaWAWZ3s6otVJ3A
+================================================================================
+
+[FIELD: Number of Interviews Conducted]
+8 in-depth qualitative interviews conducted across 2 distinct user groups (6 Students + 2 Campus Staff).
+
+[FIELD: User Groups Covered]
+Group 1: Students who experienced item loss or discovered items (Hostellers & Day Scholars).
+Group 2: Campus Ground Staff (Main Gate Security Guard & Library Caretaker).
+
+[FIELD: Key Research Findings / Direct Quotes]
+- Student S1: "I lost my Casio calculator before Mid-Terms. I posted in 4 WhatsApp groups. Someone messaged me claiming it was theirs just to get a free calculator."
+- Student S2: "I lost my LPU ID card during freshers week. Without it, I couldn't enter the hostel mess or library for 4 days until re-issue."
+- Finder S3: "I found a set of bike keys with a red lanyard near the stairs. I had class in 5 minutes, so I just left them on the counter. I didn't know who to give them to."
+- Student S4: "When my friend lost her wallet, she posted her phone number on an Instagram confessions page. She got 15 creepy prank calls and never got the wallet back."
+- Security Guard G1: "We have a cardboard box full of water bottles and notebooks. Students rarely come to ask because they assume it's stolen, not submitted."
+- Library Staff G2: "Every exam week, students bring 5 to 10 lost calculators and glasses. Matching them to the real owner is impossible because they all look identical."
+
+[FIELD: Observation Summary (AEIOU Framework)]
+Conducted 2 observation visits at peak hours (12:45 PM & 5:00 PM) at Central Library Security Desk and Block 34 Foyer. Observed severe overcrowding during class transitions, uncatalogued boxes of found items behind security counters, and students repeatedly asking guards for lost items without having proof of ownership.
+
+[FIELD: Key Insight Uncovered]
+The primary barrier to returning lost items is not dishonesty, but FRICTION and FEAR: Finders lack a quick, trustworthy 60-second way to hand over items without getting questioned or blamed; while losers fear publicizing their phone numbers and specific item details on open WhatsApp groups where opportunists submit false claims.

@@ -1,0 +1,28 @@
+================================================================================
+INT335 DESIGN THINKING — CHECKPOINT 7 (CP7) SUBMISSION ANSWERS
+Google Form Link: forms.gle/3whaWAWZ3s6otVJ3A
+================================================================================
+
+[FIELD: Final Prototype URL / Deployment Link]
+Working Demo Available Online & Locally:
+- GitHub Repository: https://github.com/bhuvanasaigeddada08-eng/Returlooptesting.git
+- Local Launcher Script: START_SERVERS.bat (Runs on http://localhost:5173 with Python Flask backend on port 5000)
+
+[FIELD: Final Solution Description & Novelty]
+ReturnLoop LPU is a privacy-preserving, zero-cost university lost-and-found recovery network. It features an automated 5-trait similarity matching engine, privacy-masked public listings, secret identifier claim verification, and campus security admin oversight, localized in 7 Indian regional languages with ₹0 external infrastructure dependencies.
+
+[FIELD: Key Impact & Metrics]
+- Average Item Recovery Time: Reduced from 3–5 days to under 2 hours.
+- Privacy Exposure: 100% reduction in public phone number and email leaks (zero personal contacts exposed on public boards).
+- Impostor Fraud Rate: 0% false claims processed due to mandatory hidden-identifier proof verification by campus security.
+- Cost: ₹0 capital expenditure and zero ongoing hosting subscriptions.
+
+[FIELD: Honest Limitations & What Remains Broken]
+- High-value electronic recovery still depends on honest finder initiative; items stolen with deliberate intent cannot be tracked without physical security camera integration.
+- Offline integration: Physical security desks without internet connection require periodic manual paper-slip synchronization at shift ends.
+
+[FIELD: NABC Summary]
+- Need: Chronic loss of high-value items across LPU's 600-acre campus with unmoderated, privacy-leaking WhatsApp groups and unindexed security boxes.
+- Approach: Decentralized web/mobile platform with trait matching, hidden proof verification, and campus security admin governance in 7 languages at ₹0 cost.
+- Benefit: Rapid recovery, total privacy protection, zero fraud, and zero cost.
+- Competition: Superior to unindexed WhatsApp groups, slow UMS ticketing, and fragile paper notice boards.

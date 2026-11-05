@@ -1,0 +1,27 @@
+================================================================================
+INT335 DESIGN THINKING — CHECKPOINT 3 (CP3) SUBMISSION ANSWERS
+Google Form Link: forms.gle/3whaWAWZ3s6otVJ3A
+================================================================================
+
+[FIELD: Name of Persona 1]
+Aarav Sharma — The Distressed Exam Student (20, 2nd-Year CSE Hosteller)
+
+[FIELD: Name of Persona 2]
+Riya Verma — The Busy Commuter Finder (21, 3rd-Year Biotech Day Scholar)
+
+[FIELD: Point of View (POV) Statement]
+University students carrying essential academic belongings across a 600-acre campus need an authenticated, privacy-preserving recovery channel without exposing their personal phone numbers because informal social media groups invite fraudulent claims, spam harassment, and permanent property loss.
+
+[FIELD: How Might We (HMW) Questions Considered]
+1. How might we make returning a found item take under 60 seconds for a busy student finder?
+2. How might we verify that a claimant is the genuine owner without making them publicly describe sensitive details?
+3. How might we eliminate the exposure of students' personal contact numbers during the recovery process?
+4. How might we bridge the information gap between security desk physical storage boxes and online student searches?
+
+[FIELD: Main Selected HMW Question Approved]
+"How might we make returning a found item the effortless, natural choice on campus while ensuring only the verified rightful owner can claim it through trusted campus security?"
+
+[FIELD: Traceability to Empathy Evidence]
+- The need for privacy traces to Participant S4's harassment experience after posting on Instagram.
+- The need for ownership verification traces to Participant S1's experience with false claimants on WhatsApp and Library Staff G2's struggle with identical calculators.
+- The need for rapid reporting traces to Participant S3's 5-minute class break constraint.

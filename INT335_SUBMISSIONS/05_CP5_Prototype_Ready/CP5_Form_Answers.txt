@@ -1,0 +1,28 @@
+================================================================================
+INT335 DESIGN THINKING — CHECKPOINT 5 (CP5) SUBMISSION ANSWERS
+Google Form Link: forms.gle/3whaWAWZ3s6otVJ3A
+================================================================================
+
+[FIELD: Prototype Type & Fidelity]
+Evolving Prototype:
+- Low-Fidelity: 5-Screen Paper Prototype & Storyboard (Attached as paper_prototype.png and storyboard.png)
+- Mid-Fidelity: Interactive Wireframes & User Journey Flow (Attached as user_flow.png)
+- High-Fidelity: Responsive Web & Android App (ReturnLoop LPU)
+
+[FIELD: Description of the 5 Core Screens/Steps]
+1. Explore Catalog Screen: Searchable, categorized grid of items across LPU campus blocks with private traits masked.
+2. Report Lost Belonging Flow: 4-step wizard capturing category, location, date, color, and unique identifying marks.
+3. Report Found Item Flow: 60-second rapid logging interface for finders with campus security drop-off point selection.
+4. Ownership Claim Submission: Claimant must provide hidden proof (e.g. scratch, lock screen, engraved initials) without seeing the answer.
+5. Campus Security Admin Verification Desk: Side-by-side inspection desk allowing campus guards/admins to review claim proof and approve handover.
+
+[FIELD: What the Prototype is Specifically Testing]
+Testing whether a stranger can report an item and complete an ownership claim without verbal assistance from the project team, and whether the hidden-proof verification mechanism reliably prevents false claims while maintaining student privacy.
+
+[FIELD: Test Plan Summary & Users Lined Up]
+5 real users lined up for testing: 3 Students across different blocks, 1 Day Scholar commuter, and 1 Campus Gate Security Staff Member.
+Tasks given:
+- Task 1: Report a lost Casio calculator left in Block 36 in under 90 seconds.
+- Task 2: Search for a found blue laptop and switch interface language to Hindi or Telugu.
+- Task 3: Submit an ownership claim providing specific secret proof.
+- Task 4: Verify the claim as a security admin and generate a handover reference code.

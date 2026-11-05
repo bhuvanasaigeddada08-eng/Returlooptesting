@@ -1,0 +1,30 @@
+================================================================================
+INT335 DESIGN THINKING — CHECKPOINT 4 (CP4) SUBMISSION ANSWERS
+Google Form Link: forms.gle/3whaWAWZ3s6otVJ3A
+================================================================================
+
+[FIELD: Number of Ideas Generated]
+32 distinct ideas generated across 3 creative ideation methods.
+
+[FIELD: Ideation Methods Used]
+1. Brainstorming (Open free-flow quantity generation)
+2. Crazy 8s (8 sketches in 8 minutes per member)
+3. SCAMPER (Substitute, Combine, Adapt, Modify, Put to other use, Eliminate, Reverse)
+
+[FIELD: The 4 Strategic Solution Themes Grouped]
+Theme 1: Physical Smart Hardware Lockers & NFC Drop Boxes
+Theme 2: Unmoderated Peer-to-Peer Chat & Social Bot
+Theme 3: Cloud AI Computer Vision Photo Classifier
+Theme 4: Hybrid Privacy-Preserving Web/Mobile Platform with Trait-Based Matching & Security Desk Verification (ReturnLoop LPU)
+
+[FIELD: Weighted Screening Matrix Criteria & Weights]
+- Zero Implementation & Maintenance Cost (₹0): Weight = 25%
+- Privacy Protection & Fraud Prevention: Weight = 30%
+- Technical Feasibility & Campus Adoption: Weight = 25%
+- Multi-Language Inclusivity (Vernacular Support): Weight = 20%
+
+[FIELD: Chosen Concept & Justification]
+Theme 4 (ReturnLoop LPU Platform) was selected with the highest score (5.0 / 5.0).
+- Unlike Theme 1 (Smart Lockers), it requires ₹0 capital expenditure and zero hardware installation.
+- Unlike Theme 2 (P2P Chat), it completely prevents impostor fraud by masking private identifying details and enforcing hidden proof verification.
+- Unlike Theme 3 (Cloud AI), it does not rely on costly external cloud APIs or high-bandwidth uploads, operating reliably on standard university infrastructure with 7 Indian languages.
