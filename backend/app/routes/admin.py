@@ -452,7 +452,7 @@ def create_admin_user():
     db.session.commit()
 
     log_audit_event(
-        actor_user_id=g.current_user.id,
+        actor_id=g.current_user.id,
         action="admin_create_user",
         target_type="User",
         target_id=new_user.id,
@@ -503,7 +503,7 @@ def update_admin_user(user_id):
     db.session.commit()
 
     log_audit_event(
-        actor_user_id=g.current_user.id,
+        actor_id=g.current_user.id,
         action="admin_update_user",
         target_type="User",
         target_id=target_user.id,
@@ -534,7 +534,7 @@ def delete_admin_user(user_id):
     db.session.commit()
 
     log_audit_event(
-        actor_user_id=g.current_user.id,
+        actor_id=g.current_user.id,
         action="admin_delete_user",
         target_type="User",
         target_id=user_id,
