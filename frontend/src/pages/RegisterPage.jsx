@@ -57,11 +57,7 @@ export const RegisterPage = () => {
         password: formData.password,
         role: formData.role
       });
-      if (formData.role === "admin" || res?.user?.role === "admin") {
-        navigate("/admin");
-      } else {
-        navigate("/dashboard");
-      }
+      navigate("/explore");
     } catch (err) {
       setErrorMessage(err.message || "Registration failed.");
     } finally {
@@ -90,43 +86,6 @@ export const RegisterPage = () => {
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Account Role Selector */}
-          <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
-              Account Type / Role
-            </label>
-            <div className="grid grid-cols-2 gap-2">
-              <button
-                type="button"
-                onClick={() => setFormData(prev => ({ ...prev, role: "student" }))}
-                className={`py-2 px-3 rounded-xl border text-xs font-semibold flex items-center justify-center gap-1.5 transition cursor-pointer ${
-                  formData.role === "student"
-                    ? "bg-teal-50 border-teal-500 text-teal-800 ring-1 ring-teal-500 shadow-sm"
-                    : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
-                }`}
-              >
-                <User className="w-3.5 h-3.5" />
-                Student
-              </button>
-              <button
-                type="button"
-                onClick={() => setFormData(prev => ({ ...prev, role: "admin" }))}
-                className={`py-2 px-3 rounded-xl border text-xs font-semibold flex items-center justify-center gap-1.5 transition cursor-pointer ${
-                  formData.role === "admin"
-                    ? "bg-blue-50 border-blue-500 text-blue-800 ring-1 ring-blue-500 shadow-sm"
-                    : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
-                }`}
-              >
-                <Shield className="w-3.5 h-3.5" />
-                Campus Admin
-              </button>
-            </div>
-            {formData.role === "admin" && (
-              <p className="text-[11px] text-blue-600 mt-1.5 bg-blue-50/60 p-2 rounded-lg border border-blue-100">
-                🛡️ Campus Admin has full access to moderate all lost & found items, approve claims, and audit logs.
-              </p>
-            )}
-          </div>
           <div>
             <label className="block text-xs font-semibold text-slate-700 mb-1.5">
               {t("auth.nameLabel")}

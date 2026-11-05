@@ -25,7 +25,8 @@ def register():
     if existing_user:
         return jsonify({"error": "An account with this email address already exists. Please sign in."}), 409
 
-    role = "admin" if (data.get("role") == "admin" or "admin" in email) else "student"
+    # Public registration is strictly for campus students/users.
+    role = "student"
     user = User(
         email=email,
         display_name=data["display_name"].strip(),

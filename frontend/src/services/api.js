@@ -277,6 +277,37 @@ class ApiService {
     return this.request(`/api/admin/audit-logs?page=${page}`);
   }
 
+  // Admin User Accounts Management
+  async getAdminUsers(params = {}) {
+    const query = new URLSearchParams();
+    Object.keys(params).forEach(key => {
+      if (params[key] !== undefined && params[key] !== null && params[key] !== "") {
+        query.append(key, params[key]);
+      }
+    });
+    return this.request(`/api/admin/users?${query.toString()}`);
+  }
+
+  async createAdminUser(data) {
+    return this.request("/api/admin/users", {
+      method: "POST",
+      body: JSON.stringify(data)
+    });
+  }
+
+  async updateAdminUser(id, data) {
+    return this.request(`/api/admin/users/${id}`, {
+      method: "PUT",
+      body: JSON.stringify(data)
+    });
+  }
+
+  async deleteAdminUser(id) {
+    return this.request(`/api/admin/users/${id}`, {
+      method: "DELETE"
+    });
+  }
+
   async translateTexts(texts, targetLang) {
     if (!targetLang || targetLang === "en" || !texts || texts.length === 0) return {};
     try {

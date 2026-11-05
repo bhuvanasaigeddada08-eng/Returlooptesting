@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Outlet, useLocation, Navigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { 
-  LayoutDashboard, ShieldAlert, FileCheck2, History, ArrowLeft, Shield
+  LayoutDashboard, ShieldAlert, FileCheck2, History, ArrowLeft, Shield, Users
 } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import Navbar from "../components/Navbar";
@@ -29,6 +29,7 @@ export const AdminLayout = () => {
     { label: "Overview Metrics", path: "/admin", icon: LayoutDashboard },
     { label: "Item Moderation", path: "/admin/items", icon: ShieldAlert },
     { label: "Claim Reviews", path: "/admin/claims", icon: FileCheck2 },
+    { label: "User Accounts", path: "/admin/users", icon: Users },
     { label: "Audit Logs", path: "/admin/audit-logs", icon: History },
   ];
 

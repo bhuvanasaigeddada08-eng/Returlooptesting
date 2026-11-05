@@ -377,3 +377,170 @@ def get_audit_logs():
         "page": pagination.page,
         "pages": pagination.pages
     }), 200
+
+# =========================================================================
+# User Account Management (Admin Full Control)
+# =========================================================================
+
+@admin_bp.route("/users", methods=["GET"])
+@admin_required
+def get_admin_users():
+    q = request.args.get("q", "").strip()
+    role = request.args.get("role", "").strip()
+    page = request.args.get("page", 1, type=int)
+    per_page = min(request.args.get("per_page", 20, type=int), 100)
+
+    query = User.query
+    if role in ("student", "admin"):
+        query = query.filter(User.role == role)
+    if q:
+        query = query.filter(
+            db.or_(
+                User.display_name.ilike(f"%{q}%"),
+                User.email.ilike(f"%{q}%"),
+                User.phone.ilike(f"%{q}%")
+            )
+        )
+
+    pagination = query.order_by(User.created_at.desc()).paginate(page=page, per_page=per_page, error_out=False)
+
+    users_data = []
+    for u in pagination.items:
+        d = u.to_dict()
+        d["reports_count"] = ItemReport.query.filter_by(user_id=u.id).count()
+        d["claims_count"] = Claim.query.filter_by(claimant_user_id=u.id).count()
+        users_data.append(d)
+
+    return jsonify({
+        "users": users_data,
+        "total": pagination.total,
+        "page": pagination.page,
+        "pages": pagination.pages
+    }), 200
+
+@admin_bp.route("/users", methods=["POST"])
+@admin_required
+def create_admin_user():
+    data = request.get_json() or {}
+    email = data.get("email", "").strip().lower()
+    display_name = data.get("display_name", "").strip()
+    password = data.get("password", "")
+    role = data.get("role", "student")
+    phone = data.get("phone", "").strip()
+
+    if not email or "@" not in email:
+        return jsonify({"error": "Valid email address is required."}), 400
+    if not display_name:
+        return jsonify({"error": "Full name is required."}), 400
+    if not password or len(password) < 6:
+        return jsonify({"error": "Password must be at least 6 characters."}), 400
+    if role not in ("student", "admin"):
+        role = "student"
+
+    if User.query.filter_by(email=email).first():
+        return jsonify({"error": "An account with this email already exists."}), 409
+
+    new_user = User(
+        email=email,
+        display_name=display_name,
+        phone=phone or None,
+        role=role,
+        is_active=True
+    )
+    new_user.set_password(password)
+    db.session.add(new_user)
+    db.session.commit()
+
+    log_audit_event(
+        actor_user_id=g.current_user.id,
+        action="admin_create_user",
+        target_type="User",
+        target_id=new_user.id,
+        details={"created_email": email, "role": role, "name": display_name}
+    )
+
+    return jsonify({
+        "message": f"Account for {display_name} created successfully.",
+        "user": new_user.to_dict()
+    }), 201
+
+@admin_bp.route("/users/<int:user_id>", methods=["PUT", "PATCH"])
+@admin_required
+def update_admin_user(user_id):
+    target_user = db.session.get(User, user_id)
+    if not target_user:
+        return jsonify({"error": "User not found."}), 404
+
+    data = request.get_json() or {}
+    if "email" in data:
+        new_email = data["email"].strip().lower()
+        if new_email != target_user.email:
+            if User.query.filter_by(email=new_email).first():
+                return jsonify({"error": "Email is already taken by another user."}), 409
+            target_user.email = new_email
+
+    if "display_name" in data and data["display_name"].strip():
+        target_user.display_name = data["display_name"].strip()
+
+    if "phone" in data:
+        target_user.phone = data["phone"].strip() or None
+
+    if "role" in data and data["role"] in ("student", "admin"):
+        if target_user.id == g.current_user.id and data["role"] != "admin":
+            return jsonify({"error": "You cannot demote your own active admin account."}), 400
+        target_user.role = data["role"]
+
+    if "is_active" in data:
+        if target_user.id == g.current_user.id and not data["is_active"]:
+            return jsonify({"error": "You cannot deactivate your own active admin account."}), 400
+        target_user.is_active = bool(data["is_active"])
+
+    if "password" in data and data["password"]:
+        if len(data["password"]) < 6:
+            return jsonify({"error": "Password must be at least 6 characters."}), 400
+        target_user.set_password(data["password"])
+
+    db.session.commit()
+
+    log_audit_event(
+        actor_user_id=g.current_user.id,
+        action="admin_update_user",
+        target_type="User",
+        target_id=target_user.id,
+        details={"updated_email": target_user.email, "role": target_user.role, "name": target_user.display_name}
+    )
+
+    return jsonify({
+        "message": "User account updated successfully.",
+        "user": target_user.to_dict()
+    }), 200
+
+@admin_bp.route("/users/<int:user_id>", methods=["DELETE"])
+@admin_required
+def delete_admin_user(user_id):
+    if user_id == g.current_user.id:
+        return jsonify({"error": "You cannot delete your own admin account."}), 400
+
+    target_user = db.session.get(User, user_id)
+    if not target_user:
+        return jsonify({"error": "User not found."}), 404
+
+    user_name = target_user.display_name
+    user_email = target_user.email
+
+    AuditLog.query.filter_by(actor_user_id=user_id).update({"actor_user_id": None})
+    
+    db.session.delete(target_user)
+    db.session.commit()
+
+    log_audit_event(
+        actor_user_id=g.current_user.id,
+        action="admin_delete_user",
+        target_type="User",
+        target_id=user_id,
+        details={"deleted_email": user_email, "name": user_name}
+    )
+
+    return jsonify({
+        "message": f"Account for {user_name} ({user_email}) has been permanently removed."
+    }), 200

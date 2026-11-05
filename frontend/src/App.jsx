@@ -27,6 +27,7 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminItemsPage from "./pages/admin/AdminItemsPage";
 import AdminClaimsPage from "./pages/admin/AdminClaimsPage";
 import AdminAuditLogsPage from "./pages/admin/AdminAuditLogsPage";
+import AdminUsersPage from "./pages/admin/AdminUsersPage";
 
 // Root Gate: Without login, no access - immediately redirects to /login.
 // If already logged in, takes admin to /admin and student to /explore.
@@ -192,6 +193,7 @@ export const App = () => {
             <Route index element={<AdminDashboard />} />
             <Route path="items" element={<AdminItemsPage />} />
             <Route path="claims" element={<AdminClaimsPage />} />
+            <Route path="users" element={<AdminUsersPage />} />
             <Route path="audit-logs" element={<AdminAuditLogsPage />} />
           </Route>
 
