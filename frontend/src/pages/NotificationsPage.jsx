@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import api from "../services/api";
 import EmptyState from "../components/EmptyState";
+import TranslatedText from "../components/TranslatedText";
 
 export const NotificationsPage = () => {
   const { t } = useTranslation();
@@ -73,10 +74,10 @@ export const NotificationsPage = () => {
         <div>
           <div className="flex items-center gap-2">
             <Bell className="w-5 h-5 text-blue-600" />
-            <h1 className="text-2xl font-bold text-slate-900 tracking-tight">{t("notifications.title")}</h1>
+            <h1 className="text-2xl font-bold text-slate-900 tracking-tight">{t("notifications.title") || "Campus Notifications"}</h1>
           </div>
           <p className="text-xs text-slate-500 mt-1">
-            {t("notifications.subtitle")}
+            {t("notifications.subtitle") || "Stay updated on matches, claim status updates, and security alerts."}
           </p>
         </div>
 
@@ -89,7 +90,7 @@ export const NotificationsPage = () => {
                 : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
             }`}
           >
-            {filterUnreadOnly ? t("notifications.filterUnread") : t("notifications.allUpdates")}
+            {filterUnreadOnly ? (t("notifications.filterUnread") || "Unread Only") : (t("notifications.allUpdates") || "All Notifications")}
           </button>
 
           {notifications.some(n => !n.is_read) && (
@@ -97,7 +98,7 @@ export const NotificationsPage = () => {
               onClick={handleMarkAllRead}
               className="px-3.5 py-1.5 rounded-xl bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 text-xs font-semibold transition flex items-center gap-1.5 cursor-pointer"
             >
-              <Check className="w-4 h-4" /> {t("notifications.markAllRead")}
+              <Check className="w-4 h-4" /> {t("notifications.markAllRead") || "Mark all read"}
             </button>
           )}
         </div>
@@ -113,8 +114,8 @@ export const NotificationsPage = () => {
           <div className="p-12 text-center">
             <EmptyState
               icon={Bell}
-              title={filterUnreadOnly ? t("notifications.noUnread") : t("notifications.empty")}
-              description={t("notifications.emptyDesc")}
+              title={filterUnreadOnly ? (t("notifications.noUnread") || "No unread alerts") : (t("notifications.empty") || "No notifications yet")}
+              description={t("notifications.emptyDesc") || "You will receive real-time alerts when matches are found or security reviews your claim."}
             />
           </div>
         ) : (
@@ -130,7 +131,7 @@ export const NotificationsPage = () => {
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                     {notif.notification_type === "match" ? (
-                      <Sparkles className="w-5 h-5 text-brand-600" />
+                      <Sparkles className="w-5 h-5 text-blue-600" />
                     ) : notif.notification_type === "claim_update" ? (
                       <ShieldCheck className="w-5 h-5 text-teal-600" />
                     ) : (
@@ -139,13 +140,15 @@ export const NotificationsPage = () => {
                   </div>
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
-                      <h4 className="font-bold text-slate-900 text-sm">{notif.title}</h4>
+                      <h4 className="font-bold text-slate-900 text-sm">
+                        <TranslatedText text={notif.title} />
+                      </h4>
                       {!notif.is_read && (
                         <span className="w-2 h-2 rounded-full bg-blue-600" />
                       )}
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed max-w-lg">
-                      {notif.message}
+                      <TranslatedText text={notif.message} />
                     </p>
                     <span className="text-[11px] text-slate-400 block pt-1">
                       {new Date(notif.created_at).toLocaleString()}
@@ -156,10 +159,10 @@ export const NotificationsPage = () => {
                 {!notif.is_read && (
                   <button
                     onClick={(e) => handleMarkAsRead(notif.id, e)}
-                    className="p-1.5 rounded-lg hover:bg-blue-100 text-blue-600 transition text-xs font-semibold"
-                    title={t("notifications.markAsRead")}
+                    className="p-1.5 rounded-lg hover:bg-blue-100 text-blue-600 transition text-xs font-semibold cursor-pointer"
+                    title={t("notifications.markAsRead") || "Mark as read"}
                   >
-                    <Check className="w-4 h-4" />
+                    <CheckCircle2 className="w-4 h-4" />
                   </button>
                 )}
               </div>

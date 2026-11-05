@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Bell, Check, Sparkles, AlertCircle, ShieldCheck } from "lucide-react";
 import api from "../services/api";
 import { useAuth } from "../context/AuthContext";
+import TranslatedText from "./TranslatedText";
 
 export const NotificationBell = () => {
+  const { t } = useTranslation();
   const { isAuthenticated } = useAuth();
   const [notifications, setNotifications] = useState([]);
   const [unreadCount, setUnreadCount] = useState(0);
@@ -39,6 +42,15 @@ export const NotificationBell = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleBellClick = () => {
+    // On mobile viewports, navigate directly to the full notifications page
+    if (window.innerWidth < 640) {
+      navigate("/notifications");
+      return;
+    }
+    setIsOpen(!isOpen);
+  };
+
   const handleNotificationClick = async (notif) => {
     if (!notif.is_read) {
       try {
@@ -72,9 +84,10 @@ export const NotificationBell = () => {
   return (
     <div className="relative" ref={dropdownRef}>
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="relative p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition focus:outline-none"
-        aria-label="Notifications"
+        onClick={handleBellClick}
+        className="relative p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition focus:outline-none cursor-pointer"
+        aria-label={t("nav.notifications") || "Notifications"}
+        title={t("nav.notifications") || "Notifications"}
       >
         <Bell className="w-5 h-5" />
         {unreadCount > 0 && (
@@ -87,13 +100,13 @@ export const NotificationBell = () => {
       {isOpen && (
         <div className="absolute right-0 mt-2 w-80 sm:w-96 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 z-50 animate-in fade-in zoom-in-95 duration-150">
           <div className="px-4 py-2.5 border-b border-slate-100 flex items-center justify-between">
-            <span className="font-semibold text-sm text-slate-900">{t("nav.notifications")}</span>
+            <span className="font-semibold text-sm text-slate-900">{t("nav.notifications") || "Notifications"}</span>
             {unreadCount > 0 && (
               <button
                 onClick={handleMarkAllRead}
-                className="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"
+                className="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1 cursor-pointer"
               >
-                <Check className="w-3.5 h-3.5" /> {t("notifications.markAllAsRead") || "Mark all read"}
+                <Check className="w-3.5 h-3.5" /> {t("notifications.markAllRead") || "Mark all read"}
               </button>
             )}
           </div>
@@ -101,7 +114,7 @@ export const NotificationBell = () => {
           <div className="max-h-80 overflow-y-auto divide-y divide-slate-100">
             {notifications.length === 0 ? (
               <div className="p-6 text-center text-xs text-slate-500">
-                No notifications right now.
+                {t("notifications.empty") || "No notifications right now."}
               </div>
             ) : (
               notifications.slice(0, 8).map(notif => (
@@ -114,7 +127,7 @@ export const NotificationBell = () => {
                 >
                   <div className="p-2 rounded-xl bg-slate-100 text-slate-600 flex-shrink-0 mt-0.5">
                     {notif.notification_type === "match" ? (
-                      <Sparkles className="w-4 h-4 text-brand-600" />
+                      <Sparkles className="w-4 h-4 text-blue-600" />
                     ) : notif.notification_type === "claim_update" ? (
                       <ShieldCheck className="w-4 h-4 text-teal-600" />
                     ) : (
@@ -123,10 +136,10 @@ export const NotificationBell = () => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-xs font-semibold text-slate-900 truncate">
-                      {notif.title}
+                      <TranslatedText text={notif.title} />
                     </p>
                     <p className="text-xs text-slate-600 line-clamp-2 mt-0.5">
-                      {notif.message}
+                      <TranslatedText text={notif.message} />
                     </p>
                   </div>
                   {!notif.is_read && (
@@ -143,7 +156,7 @@ export const NotificationBell = () => {
               onClick={() => setIsOpen(false)}
               className="text-xs font-medium text-slate-700 hover:text-blue-600 transition block"
             >
-              View all notifications →
+              {t("notifications.viewAll") || "View all notifications →"}
             </Link>
           </div>
         </div>

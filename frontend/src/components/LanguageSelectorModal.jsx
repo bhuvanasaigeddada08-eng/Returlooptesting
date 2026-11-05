@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import { Globe, Check, X } from "lucide-react";
 import { SUPPORTED_LANGUAGES, setAppLanguage } from "../i18n";
@@ -8,6 +9,15 @@ import api from "../services/api";
 export const LanguageSelectorModal = ({ isOpen, onClose }) => {
   const { t, i18n } = useTranslation();
   const { user, isAuthenticated } = useAuth();
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -34,19 +44,23 @@ export const LanguageSelectorModal = ({ isOpen, onClose }) => {
     if (onClose) onClose();
   };
 
-  return (
+  // createPortal renders directly into document.body to break out of all
+  // sticky headers, backdrop-filter containing blocks, and mobile CSS stacking contexts
+  return createPortal(
     <div 
-      className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 bg-slate-950/75 backdrop-blur-sm animate-in fade-in duration-150 overflow-hidden"
+      className="fixed inset-0 flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-sm animate-in fade-in duration-150 overflow-hidden"
       onClick={onClose}
+      style={{ zIndex: 99999 }}
     >
       <div 
         onClick={(e) => e.stopPropagation()}
-        className="bg-white rounded-3xl max-w-sm sm:max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[85vh] max-h-[85dvh] my-auto animate-in zoom-in-95 duration-150"
+        className="bg-white rounded-3xl max-w-sm sm:max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[85vh] max-h-[85dvh] my-auto animate-in zoom-in-95 duration-150 relative"
+        style={{ zIndex: 100000 }}
         role="dialog"
         aria-labelledby="language-modal-title"
       >
         {/* Header */}
-        <div className="px-4 py-3 sm:px-5 sm:py-3.5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80 flex-shrink-0">
+        <div className="px-4 py-3 sm:px-5 sm:py-3.5 border-b border-slate-100 flex items-center justify-between bg-slate-50/90 flex-shrink-0">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 shadow-xs border border-blue-100">
               <Globe className="w-4 h-4" />
@@ -69,7 +83,7 @@ export const LanguageSelectorModal = ({ isOpen, onClose }) => {
           </button>
         </div>
 
-        {/* 7 Languages List - Perfectly sized for mobile viewports */}
+        {/* 7 Languages List - Sized for mobile viewports */}
         <div className="p-2.5 sm:p-3 overflow-y-auto space-y-1.5 flex-1 min-h-0 overscroll-contain">
           {SUPPORTED_LANGUAGES.map((lang) => {
             const isSelected = (i18n.language || "en").startsWith(lang.code);
@@ -132,7 +146,8 @@ export const LanguageSelectorModal = ({ isOpen, onClose }) => {
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 

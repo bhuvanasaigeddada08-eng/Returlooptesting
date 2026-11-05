@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 
 export const Modal = ({ isOpen, onClose, title, children, maxWidth = "max-w-lg" }) => {
@@ -18,10 +19,15 @@ export const Modal = ({ isOpen, onClose, title, children, maxWidth = "max-w-lg" 
 
   if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
+  return createPortal(
+    <div 
+      className="fixed inset-0 flex items-center justify-center p-3 sm:p-6 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200"
+      style={{ zIndex: 99999 }}
+      onClick={onClose}
+    >
       <div 
-        className={`bg-white rounded-2xl shadow-2xl border border-slate-100 w-full ${maxWidth} max-h-[88vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-200`}
+        className={`bg-white rounded-2xl shadow-2xl border border-slate-100 w-full ${maxWidth} max-h-[88vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-200 relative`}
+        style={{ zIndex: 100000 }}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 border-b border-slate-100 bg-slate-50/50">
@@ -37,7 +43,8 @@ export const Modal = ({ isOpen, onClose, title, children, maxWidth = "max-w-lg" 
           {children}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 

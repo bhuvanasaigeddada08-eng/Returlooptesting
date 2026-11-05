@@ -7,3 +7,4 @@ export const TranslatedText = ({ text, as: Component = "span", className = "" })
 };
 
 export default TranslatedText;
+
