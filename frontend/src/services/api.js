@@ -46,6 +46,21 @@ class ApiService {
 
       return data;
     } catch (err) {
+      if (err.name === "TypeError" && err.message && err.message.toLowerCase().includes("fetch")) {
+        try {
+          await new Promise((resolve) => setTimeout(resolve, 2000));
+          const retryResponse = await fetch(url, config);
+          const retryData = await retryResponse.json().catch(() => ({}));
+          if (!retryResponse.ok) {
+            const errorMsg = retryData.error || (retryData.errors ? retryData.errors.join(", ") : "Request failed");
+            throw new Error(errorMsg);
+          }
+          return retryData;
+        } catch (retryErr) {
+          console.error(`API Retry Error on ${endpoint}:`, retryErr);
+          throw retryErr;
+        }
+      }
       console.error(`API Error on ${endpoint}:`, err);
       throw err;
     }

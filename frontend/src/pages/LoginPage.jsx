@@ -56,7 +56,13 @@ export const LoginPage = () => {
       }
     } catch (err) {
       if (err.message && err.message.toLowerCase().includes("failed to fetch")) {
-        setErrorMessage(t("auth.failedToFetch"));
+        const host = window.location.hostname || "";
+        const isLocal = host === "localhost" || host === "127.0.0.1" || /^172\./.test(host) || /^192\.168\./.test(host) || /^10\./.test(host);
+        if (isLocal) {
+          setErrorMessage("Cannot connect to local backend. Please ensure 'START_SERVERS.bat' is running on your laptop (Flask port 5000).");
+        } else {
+          setErrorMessage("Cloud server is waking up (takes ~30-40s on Render free tier). Please wait a moment and click Sign In again.");
+        }
       } else {
         setErrorMessage(err.message || t("auth.invalidCredentials"));
       }

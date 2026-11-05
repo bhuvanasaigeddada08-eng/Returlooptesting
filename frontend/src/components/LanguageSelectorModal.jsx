@@ -48,13 +48,18 @@ export const LanguageSelectorModal = ({ isOpen, onClose }) => {
   // sticky headers, backdrop-filter containing blocks, and mobile CSS stacking contexts
   return createPortal(
     <div 
-      className="fixed inset-0 flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-sm animate-in fade-in duration-150 overflow-hidden"
+      className="fixed inset-0 flex items-center justify-center p-3.5 sm:p-6 bg-slate-950/80 backdrop-blur-sm animate-in fade-in duration-150"
       onClick={onClose}
-      style={{ zIndex: 99999 }}
+      style={{
+        zIndex: 99999,
+        paddingTop: "max(16px, env(safe-area-inset-top))",
+        paddingBottom: "max(16px, env(safe-area-inset-bottom))",
+      }}
     >
       <div 
         onClick={(e) => e.stopPropagation()}
-        className="bg-white rounded-3xl max-w-sm sm:max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[85vh] max-h-[85dvh] my-auto animate-in zoom-in-95 duration-150 relative"
+        onTouchEnd={(e) => e.stopPropagation()}
+        className="bg-white rounded-3xl max-w-sm sm:max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[80vh] max-h-[80dvh] animate-in zoom-in-95 duration-150 relative"
         style={{ zIndex: 100000 }}
         role="dialog"
         aria-labelledby="language-modal-title"

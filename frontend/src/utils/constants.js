@@ -1,8 +1,20 @@
 let rawBase = import.meta.env.VITE_API_BASE_URL;
 if (rawBase) {
   rawBase = rawBase.replace(/\/api\/?$/, "").replace(/\/+$/, "");
-} else if (typeof window !== "undefined" && !window.location.hostname.includes("localhost")) {
-  rawBase = "https://returnloop-backend.onrender.com";
+} else if (typeof window !== "undefined") {
+  const host = window.location.hostname || "";
+  const isLocal =
+    host === "localhost" ||
+    host === "127.0.0.1" ||
+    /^192\.168\./.test(host) ||
+    /^10\./.test(host) ||
+    /^172\.(1[6-9]|2[0-9]|3[0-1])\./.test(host) ||
+    host.endsWith(".local");
+  if (isLocal) {
+    rawBase = "";
+  } else {
+    rawBase = "https://returnloop-backend.onrender.com";
+  }
 } else {
   rawBase = "";
 }
