@@ -1,0 +1,60 @@
+================================================================================
+LOVELY PROFESSIONAL UNIVERSITY · SCHOOL OF COMPUTER SCIENCE & ENGINEERING
+INT335: DESIGN THINKING · PARTICIPANT CONSENT & FIELD RESEARCH LOG SHEET
+================================================================================
+Project: Return Loop LPU: Campus Lost and Found support (Project ID: P04)
+Section: K212520 | Team No.: Team 15 | Mentor: Dr. Sarabjit Kaur
+Team Members:
+1. G. Bhuvanasai (Reg: 12508429) - Project Lead
+2. Abin Raj MR (Reg: 12509293) - Research Lead
+3. Adarsh (Reg: 12517821) - Testing Lead
+4. Piyush Mehra (Reg: 12509335) - Presentation Lead
+
+--------------------------------------------------------------------------------
+PARTICIPANT CONSENT STATEMENT:
+"I confirm that I have voluntarily participated in the user research and empathy 
+study conducted by Team 15 for the INT335 Design Thinking project. I understand 
+that the information shared regarding lost and found experiences on campus is 
+used purely for academic research, and no sensitive personal or financial 
+information was collected."
+--------------------------------------------------------------------------------
+
+FIELD PARTICIPANT ROSTER & SIGNATURES:
+
+1. Code: S1 | Role: B.Tech CSE (Hosteller, Block 14)
+   Location: Central Library 2nd Floor
+   Name & Reg No: _____________________________________ Signature: _____________
+
+2. Code: S2 | Role: B.Tech 1st Year (Hosteller, Block 28)
+   Location: Block 34 Help Desk
+   Name & Reg No: _____________________________________ Signature: _____________
+
+3. Code: S3 | Role: B.Tech Mech (Day Scholar)
+   Location: UniMall Food Court
+   Name & Reg No: _____________________________________ Signature: _____________
+
+4. Code: S4 | Role: B.Tech ECE (Day Scholar)
+   Location: Block 36 Corridor
+   Name & Reg No: _____________________________________ Signature: _____________
+
+5. Code: S5 | Role: B.Tech CSE (Commuter Scholar)
+   Location: Parking Lot 2
+   Name & Reg No: _____________________________________ Signature: _____________
+
+6. Code: S6 | Role: MBA 1st Year (Hosteller)
+   Location: Central Library Reading Room
+   Name & Reg No: _____________________________________ Signature: _____________
+
+7. Code: G1 | Role: Campus Security Desk Guard
+   Location: Block 34 Gate Counter
+   Name: Guard Gurpreet Singh                           Signature: _____________
+
+8. Code: G2 | Role: Library Circulation Staff
+   Location: Central Library Counter
+   Name: Staff Caretaker                                Signature: _____________
+
+--------------------------------------------------------------------------------
+VERIFICATION:
+Team Lead Signature: G. Bhuvanasai (Date: 30/10/26)
+Mentor Verification: Dr. Sarabjit Kaur
+================================================================================
