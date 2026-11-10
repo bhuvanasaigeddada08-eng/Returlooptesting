@@ -411,6 +411,7 @@ def main():
 
     # 5. Generate CP5 Form Answers PDF
     cp5_fields = [
+        ("Prototype Deployment URL", "Live Website: https://returlooptesting-khwd.vercel.app/\nGitHub: https://github.com/bhuvanasaigeddada08-eng/Returlooptesting.git"),
         ("Prototype Format", "Full-Stack Responsive Web Application (React + Vite + Tailwind CSS + Python Flask backend) and Low-Fidelity Paper Mockup Screens."),
         ("Key Features Built", "1. Privacy-First Lost & Found Reporting (< 60s flow).\n2. Automated 5-Trait Similarity Matching Algorithm.\n3. Secret Identifier Claim Verification (hidden serial numbers/markings).\n4. 7 Indian Regional Languages (Hindi, Punjabi, Telugu, Tamil, Bengali, Marathi, English).\n5. Campus Security Admin Governance & Audit Logging."),
         ("User Testing Scenarios", "Scenario A: Loser logs lost calculator with private markings.\nScenario B: Finder logs found item; receives instant automated match.\nScenario C: Campus security verifies owner's private proof and logs handover."),
@@ -435,7 +436,7 @@ def main():
 
     # 7. Generate CP7 Form Answers PDF
     cp7_fields = [
-        ("Final Prototype URL", "GitHub: https://github.com/bhuvanasaigeddada08-eng/Returlooptesting.git | Local: START_SERVERS.bat"),
+        ("Final Prototype URL", "Live Website: https://returlooptesting-khwd.vercel.app/\nGitHub: https://github.com/bhuvanasaigeddada08-eng/Returlooptesting.git\nLocal: START_SERVERS.bat"),
         ("Final Solution Summary", "ReturnLoop LPU: A privacy-first university lost-and-found recovery network with trait matching, masked listings, and campus security oversight in 7 languages at ₹0 cost."),
         ("Key Impact Metrics", "Recovery time reduced from 4 days to < 2 hours; 100% reduction in personal contact leaks; 0% false claims processed."),
         ("Honest Limitations", "Relies on honest finder initiative; physical security desks without internet require manual paper sync at shift ends."),
