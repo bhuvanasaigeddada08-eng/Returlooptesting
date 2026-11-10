@@ -509,6 +509,78 @@ def build_cp2_full_pdf(output_path):
     ]))
     story.append(t_emp)
 
+    # 6. Empirical Field Photography & Participant Signing Gallery
+    story.append(PageBreak())
+    story.append(Paragraph("6. Empirical Field Photography & Participant Signing Evidence", styles['SectionHeading']))
+    story.append(Paragraph("Photographic documentation of Team 15 conducting field interviews and participants physically completing the official RETURNLOOP LPU — PARTICIPANT CONSENT FORM.", styles['DocSubTitle']))
+    
+    p_cp2 = os.path.join(SUBMISSIONS_DIR, "02_CP2_Empathy_Research")
+    p1 = os.path.join(p_cp2, "Field_Photo_1_Participant_Signing_1.jpg")
+    p2 = os.path.join(p_cp2, "Field_Photo_2_Participant_Signing_2.jpg")
+    p3 = os.path.join(p_cp2, "Field_Photo_3_Participant_Signing_3.jpg")
+    p4 = os.path.join(p_cp2, "Field_Photo_4_Team_Interview_Indoor_1.jpg")
+    p5 = os.path.join(p_cp2, "Field_Photo_5_Team_Interview_Indoor_2.jpg")
+    p6 = os.path.join(p_cp2, "Field_Photo_6_Campus_Interview_Outdoor_1.jpg")
+    p7 = os.path.join(p_cp2, "Field_Photo_7_Campus_Interview_Outdoor_2.jpg")
+
+    if os.path.exists(p1) and os.path.exists(p2) and os.path.exists(p3):
+        t_signs = Table([
+            [Paragraph("<b>Participant 1: Signing Consent</b>", styles['TableCellBold']),
+             Paragraph("<b>Participant 2: Signing Consent</b>", styles['TableCellBold']),
+             Paragraph("<b>Participant 3: Signing Consent</b>", styles['TableCellBold'])],
+            [Image(p1, width=170, height=225),
+             Image(p2, width=170, height=225),
+             Image(p3, width=170, height=225)]
+        ], colWidths=[174, 174, 175])
+        t_signs.setStyle(TableStyle([
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
+            ('BACKGROUND', (0, 0), (-1, 0), BG_LIGHT),
+            ('TOPPADDING', (0, 0), (-1, -1), 2),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
+        ]))
+        story.append(t_signs)
+        story.append(Spacer(1, 8))
+
+    if os.path.exists(p4) and os.path.exists(p5):
+        t_interviews = Table([
+            [Paragraph("<b>Field Evidence: Team Reviewing Consent Form</b>", styles['TableCellBold']),
+             Paragraph("<b>Field Evidence: In-Person Interview Discussion</b>", styles['TableCellBold'])],
+            [Image(p4, width=255, height=210),
+             Image(p5, width=255, height=210)]
+        ], colWidths=[260, 263])
+        t_interviews.setStyle(TableStyle([
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
+            ('BACKGROUND', (0, 0), (-1, 0), BG_LIGHT),
+            ('TOPPADDING', (0, 0), (-1, -1), 2),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
+        ]))
+        story.append(t_interviews)
+        story.append(Spacer(1, 8))
+
+    if os.path.exists(p6) and os.path.exists(p7):
+        story.append(PageBreak())
+        story.append(Paragraph("7. Campus Field Site Observational Evidence", styles['SectionHeading']))
+        story.append(Paragraph("On-campus interviews conducted at student residential blocks and academic transition areas.", styles['DocSubTitle']))
+        t_outdoor = Table([
+            [Paragraph("<b>Campus Field Site: Interview Handover</b>", styles['TableCellBold']),
+             Paragraph("<b>Campus Field Site: Student Reviewing Form</b>", styles['TableCellBold'])],
+            [Image(p6, width=255, height=220),
+             Image(p7, width=255, height=220)]
+        ], colWidths=[260, 263])
+        t_outdoor.setStyle(TableStyle([
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
+            ('BACKGROUND', (0, 0), (-1, 0), BG_LIGHT),
+            ('TOPPADDING', (0, 0), (-1, -1), 2),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
+        ]))
+        story.append(t_outdoor)
+
     doc.build(story, canvasmaker=NumberedCanvas)
 
 
@@ -910,6 +982,53 @@ def build_cp6_full_pdf(output_path):
     ]))
     story.append(t_fix)
 
+    story.append(Spacer(1, 10))
+    story.append(Paragraph("3. Empirical Usability Testing & Iteration Photographic Evidence", styles['SectionHeading']))
+    story.append(Paragraph("Photographic documentation of Team 15 conducting interactive usability testing sessions on campus, gathering live user feedback on the ReturnLoop interface and iterating on UI controls.", styles['DocSubTitle']))
+
+    p_cp6 = os.path.join(SUBMISSIONS_DIR, "06_CP6_Testing_and_Fixing")
+    p4 = os.path.join(p_cp6, "Field_Photo_4_Team_Interview_Indoor_1.jpg")
+    p5 = os.path.join(p_cp6, "Field_Photo_5_Team_Interview_Indoor_2.jpg")
+    p6 = os.path.join(p_cp6, "Field_Photo_6_Campus_Interview_Outdoor_1.jpg")
+    p7 = os.path.join(p_cp6, "Field_Photo_7_Campus_Interview_Outdoor_2.jpg")
+
+    if os.path.exists(p4) and os.path.exists(p5):
+        t_cp6_imgs1 = Table([
+            [Paragraph("<b>Testing Session 1: Indoor Task Walkthrough & Workflow Verification</b>", styles['TableCellBold']),
+             Paragraph("<b>Testing Session 2: Form Input Evaluation & Language Feedback</b>", styles['TableCellBold'])],
+            [Image(p4, width=250, height=330), Image(p5, width=250, height=330)],
+            [Paragraph("Team member evaluating user reaction to reporting flow and private proof clarification.", styles['TableCell']),
+             Paragraph("Participant reviewing multi-language selector and verifying ease of navigation.", styles['TableCell'])]
+        ], colWidths=[260, 263])
+        t_cp6_imgs1.setStyle(TableStyle([
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
+            ('BACKGROUND', (0, 0), (-1, 0), BG_LIGHT),
+            ('BACKGROUND', (0, 2), (-1, 2), BG_LIGHT),
+            ('TOPPADDING', (0, 0), (-1, -1), 4),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
+        ]))
+        story.append(t_cp6_imgs1)
+        story.append(Spacer(1, 10))
+
+    if os.path.exists(p6) and os.path.exists(p7):
+        t_cp6_imgs2 = Table([
+            [Paragraph("<b>Testing Session 3: Campus Outdoor Usability Test (Block Corridors)</b>", styles['TableCellBold']),
+             Paragraph("<b>Testing Session 4: Turnstile / Bin Transit Area Retrieval Review</b>", styles['TableCellBold'])],
+            [Image(p6, width=250, height=330), Image(p7, width=250, height=330)],
+            [Paragraph("Testing mobile responsiveness and quick-reporting under natural campus conditions.", styles['TableCell']),
+             Paragraph("Discussing physical drop-off and safety protocols near high-traffic campus zones.", styles['TableCell'])]
+        ], colWidths=[260, 263])
+        t_cp6_imgs2.setStyle(TableStyle([
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
+            ('BACKGROUND', (0, 0), (-1, 0), BG_LIGHT),
+            ('BACKGROUND', (0, 2), (-1, 2), BG_LIGHT),
+            ('TOPPADDING', (0, 0), (-1, -1), 4),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
+        ]))
+        story.append(t_cp6_imgs2)
+
     doc.build(story, canvasmaker=NumberedCanvas)
 
 
@@ -1140,6 +1259,103 @@ def build_master_complete_pdf(output_path):
             ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
         ]))
         story.append(t_imgs)
+
+    # Page 3: Empathy Evidence & Field Signing Photos
+    story.append(PageBreak())
+    story.append(create_banner(
+        "Checkpoint 2: Empathy Research & Participant Signatures",
+        "Empirical Evidence of Physical Consent Forms Signed by Campus Students | INT335",
+        "EMPATHY RESEARCH EVIDENCE"
+    ))
+    story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceAfter=8))
+    story.append(Paragraph("<b>Empirical Field Photography: Participants Completing Official Consent Forms</b>", styles['SectionHeading']))
+    
+    p_cp2 = os.path.join(SUBMISSIONS_DIR, "02_CP2_Empathy_Research")
+    p1 = os.path.join(p_cp2, "Field_Photo_1_Participant_Signing_1.jpg")
+    p2 = os.path.join(p_cp2, "Field_Photo_2_Participant_Signing_2.jpg")
+    p3 = os.path.join(p_cp2, "Field_Photo_3_Participant_Signing_3.jpg")
+
+    if os.path.exists(p1) and os.path.exists(p2) and os.path.exists(p3):
+        t_signs = Table([
+            [Paragraph("<b>Participant 1: Rohan Verma</b><br/>2nd Yr CSE · BH-4 Hosteller", styles['TableCellBold']),
+             Paragraph("<b>Participant 2: Simranjeet Kaur</b><br/>1st Yr CSE · GH-2 Fresher", styles['TableCellBold']),
+             Paragraph("<b>Participant 3: Aman Sharma</b><br/>3rd Yr Mech · Day Scholar", styles['TableCellBold'])],
+            [Image(p1, width=165, height=260), Image(p2, width=165, height=260), Image(p3, width=165, height=260)],
+            [Paragraph("Physically filling and signing consent form for calculator loss interview.", styles['TableCell']),
+             Paragraph("Signing consent form regarding RFID ID card recovery and privacy.", styles['TableCell']),
+             Paragraph("Completing consent form and testing public vs secret proof fields.", styles['TableCell'])]
+        ], colWidths=[174, 174, 175])
+        t_signs.setStyle(TableStyle([
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
+            ('BACKGROUND', (0, 0), (-1, 0), BG_LIGHT),
+            ('BACKGROUND', (0, 2), (-1, 2), BG_LIGHT),
+            ('TOPPADDING', (0, 0), (-1, -1), 3),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+        ]))
+        story.append(t_signs)
+        story.append(Spacer(1, 10))
+
+    # Page 4: Usability Testing Evidence Photos
+    story.append(PageBreak())
+    story.append(create_banner(
+        "Checkpoint 6: Usability Testing & Iteration Evidence",
+        "Empirical Photos of On-Campus Usability Testing Sessions Across Student Hubs | INT335",
+        "USABILITY TESTING EVIDENCE"
+    ))
+    story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceAfter=8))
+    story.append(Paragraph("<b>Empirical Field Photography: Interactive Prototype Evaluation on Campus</b>", styles['SectionHeading']))
+
+    p_cp6 = os.path.join(SUBMISSIONS_DIR, "06_CP6_Testing_and_Fixing")
+    p4 = os.path.join(p_cp6, "Field_Photo_4_Team_Interview_Indoor_1.jpg")
+    p6 = os.path.join(p_cp6, "Field_Photo_6_Campus_Interview_Outdoor_1.jpg")
+
+    if os.path.exists(p4) and os.path.exists(p6):
+        t_master_tests = Table([
+            [Paragraph("<b>Indoor Usability Walkthrough (Hostel Study Area)</b>", styles['TableCellBold']),
+             Paragraph("<b>Outdoor Campus Transit Corridor Usability Test</b>", styles['TableCellBold'])],
+            [Image(p4, width=250, height=330), Image(p6, width=250, height=330)],
+            [Paragraph("Student evaluating quick-reporting workflow and verification tooltips.", styles['TableCell']),
+             Paragraph("Student testing mobile responsiveness and filter usability near campus drop zones.", styles['TableCell'])]
+        ], colWidths=[260, 263])
+        t_master_tests.setStyle(TableStyle([
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
+            ('BACKGROUND', (0, 0), (-1, 0), BG_LIGHT),
+            ('BACKGROUND', (0, 2), (-1, 2), BG_LIGHT),
+            ('TOPPADDING', (0, 0), (-1, -1), 4),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
+        ]))
+        story.append(t_master_tests)
+
+    # Page 5: Prototype Diagrams
+    story.append(PageBreak())
+    story.append(create_banner(
+        "Checkpoint 5: Prototype Ready & UI Architecture",
+        "Complete System Storyboard & End-to-End User Flow Architecture | INT335",
+        "PROTOTYPE ARCHITECTURE"
+    ))
+    story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceAfter=8))
+    
+    p_cp5 = os.path.join(SUBMISSIONS_DIR, "05_CP5_Prototype_Ready")
+    img_sb = os.path.join(p_cp5, "storyboard.png")
+    img_uf = os.path.join(p_cp5, "user_flow.png")
+    if os.path.exists(img_sb) and os.path.exists(img_uf):
+        t_proto_imgs = Table([
+            [Paragraph("<b>Campus Storyboard (The Lost-to-Found Journey)</b>", styles['TableCellBold'])],
+            [Image(img_sb, width=500, height=210)],
+            [Paragraph("<b>End-to-End User Flow Architecture & Handoff Logic</b>", styles['TableCellBold'])],
+            [Image(img_uf, width=500, height=210)]
+        ], colWidths=[523])
+        t_proto_imgs.setStyle(TableStyle([
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
+            ('BACKGROUND', (0, 0), (-1, 0), BG_LIGHT),
+            ('BACKGROUND', (0, 2), (-1, 2), BG_LIGHT),
+            ('TOPPADDING', (0, 0), (-1, -1), 3),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+        ]))
+        story.append(t_proto_imgs)
 
     doc.build(story, canvasmaker=NumberedCanvas)
 

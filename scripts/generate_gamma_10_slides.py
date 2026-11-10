@@ -137,6 +137,14 @@ def generate_pdf():
     img_flow = os.path.join(p_imgs, "user_flow.png")
     img_paper = os.path.join(p_imgs, "paper_prototype.png")
 
+    p_cp2 = os.path.join(BASE_DIR, "INT335_SUBMISSIONS", "02_CP2_Empathy_Research")
+    img_sign1 = os.path.join(p_cp2, "Field_Photo_1_Participant_Signing_1.jpg")
+    img_sign2 = os.path.join(p_cp2, "Field_Photo_2_Participant_Signing_2.jpg")
+
+    p_cp6 = os.path.join(BASE_DIR, "INT335_SUBMISSIONS", "06_CP6_Testing_and_Fixing")
+    img_test1 = os.path.join(p_cp6, "Field_Photo_4_Team_Interview_Indoor_1.jpg")
+    img_test2 = os.path.join(p_cp6, "Field_Photo_6_Campus_Interview_Outdoor_1.jpg")
+
     # 10 Slides Definitions
     slides_data = [
         # Slide 1
@@ -256,16 +264,48 @@ def generate_pdf():
         story.append(Paragraph(s['sub'], styles['SlideSubTitle']))
         story.append(Spacer(1, 4))
 
-        # Check if Slide 7 to embed images
-        if s['num'] == "7" and os.path.exists(img_story) and os.path.exists(img_flow):
+        # Check if Slide 3 to embed signing photos
+        if s['num'] == "3" and os.path.exists(img_sign1) and os.path.exists(img_sign2):
             t_content = Table([
                 [
                     Paragraph(f"<b>{s['left_head']}</b>", styles['CardHeader']),
                     Paragraph(f"<b>{s['right_head']}</b>", styles['CardHeader'])
                 ],
                 [
-                    Image(img_story, width=370, height=200),
-                    Image(img_flow, width=370, height=200)
+                    Image(img_sign1, width=150, height=135),
+                    Image(img_sign2, width=150, height=135)
+                ],
+                [
+                    Paragraph(s['left_body'], styles['CardBody']),
+                    Paragraph(s['right_body'], styles['CardBody'])
+                ]
+            ], colWidths=[385, 385])
+        # Check if Slide 7 to embed prototype diagrams
+        elif s['num'] == "7" and os.path.exists(img_story) and os.path.exists(img_flow):
+            t_content = Table([
+                [
+                    Paragraph(f"<b>{s['left_head']}</b>", styles['CardHeader']),
+                    Paragraph(f"<b>{s['right_head']}</b>", styles['CardHeader'])
+                ],
+                [
+                    Image(img_story, width=370, height=170),
+                    Image(img_flow, width=370, height=170)
+                ],
+                [
+                    Paragraph(s['left_body'], styles['CardBody']),
+                    Paragraph(s['right_body'], styles['CardBody'])
+                ]
+            ], colWidths=[385, 385])
+        # Check if Slide 8 to embed usability testing photos
+        elif s['num'] == "8" and os.path.exists(img_test1) and os.path.exists(img_test2):
+            t_content = Table([
+                [
+                    Paragraph(f"<b>{s['left_head']}</b>", styles['CardHeader']),
+                    Paragraph(f"<b>{s['right_head']}</b>", styles['CardHeader'])
+                ],
+                [
+                    Image(img_test1, width=150, height=135),
+                    Image(img_test2, width=150, height=135)
                 ],
                 [
                     Paragraph(s['left_body'], styles['CardBody']),
