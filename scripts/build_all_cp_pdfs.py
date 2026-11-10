@@ -360,35 +360,35 @@ def build_cp2_pdf(output_path):
     # Field Research Summary Table
     story.append(Paragraph("1. Field Participant Roster & Consent Registry", styles['SectionHeading']))
     roster_data = [
-        [Paragraph("Code", styles['TableHeader']), Paragraph("Participant Role", styles['TableHeader']),
+        [Paragraph("Participant Name", styles['TableHeader']), Paragraph("Role / Department", styles['TableHeader']),
          Paragraph("Field Location", styles['TableHeader']), Paragraph("Date", styles['TableHeader']),
          Paragraph("Key Incident / Lost Item", styles['TableHeader']), Paragraph("Status", styles['TableHeader'])],
-        [Paragraph("S1", styles['TableCellBold']), Paragraph("Hosteller (B.Tech CSE)", styles['TableCell']),
+        [Paragraph("<b>Rohan Verma</b>", styles['TableCellBold']), Paragraph("Hosteller (B.Tech CSE)", styles['TableCell']),
          Paragraph("Central Library 2nd Floor", styles['TableCell']), Paragraph("14/09/2026", styles['TableCell']),
          Paragraph("Casio fx-991EX calculator", styles['TableCell']), Paragraph("Consented", styles['TableCell'])],
-        [Paragraph("S2", styles['TableCellBold']), Paragraph("Fresher (Hostel Blk 28)", styles['TableCell']),
+        [Paragraph("<b>Simranjeet Kaur</b>", styles['TableCellBold']), Paragraph("Fresher (Hostel Blk 28)", styles['TableCell']),
          Paragraph("Block 34 Lobby", styles['TableCell']), Paragraph("15/09/2026", styles['TableCell']),
          Paragraph("LPU Smart RFID ID Card", styles['TableCell']), Paragraph("Consented", styles['TableCell'])],
-        [Paragraph("S3", styles['TableCellBold']), Paragraph("Day Scholar (B.Tech Mech)", styles['TableCell']),
+        [Paragraph("<b>Aman Sharma</b>", styles['TableCellBold']), Paragraph("Day Scholar (B.Tech Mech)", styles['TableCell']),
          Paragraph("UniMall Food Court", styles['TableCell']), Paragraph("16/09/2026", styles['TableCell']),
          Paragraph("Bike keys with red lanyard", styles['TableCell']), Paragraph("Consented", styles['TableCell'])],
-        [Paragraph("S4", styles['TableCellBold']), Paragraph("Day Scholar (B.Tech ECE)", styles['TableCell']),
+        [Paragraph("<b>Neha Reddy</b>", styles['TableCellBold']), Paragraph("Day Scholar (B.Tech ECE)", styles['TableCell']),
          Paragraph("Block 36 Corridor", styles['TableCell']), Paragraph("18/09/2026", styles['TableCell']),
          Paragraph("Leather wallet & bus pass", styles['TableCell']), Paragraph("Consented", styles['TableCell'])],
-        [Paragraph("S5", styles['TableCellBold']), Paragraph("Commuter (B.Tech CSE)", styles['TableCell']),
+        [Paragraph("<b>Sahil Gupta</b>", styles['TableCellBold']), Paragraph("Commuter (B.Tech CSE)", styles['TableCell']),
          Paragraph("Parking Lot 2", styles['TableCell']), Paragraph("19/09/2026", styles['TableCell']),
          Paragraph("Charger & bus pass", styles['TableCell']), Paragraph("Consented", styles['TableCell'])],
-        [Paragraph("S6", styles['TableCellBold']), Paragraph("Hosteller (1st Yr MBA)", styles['TableCell']),
+        [Paragraph("<b>Divya Nair</b>", styles['TableCellBold']), Paragraph("Hosteller (1st Yr MBA)", styles['TableCell']),
          Paragraph("Central Library", styles['TableCell']), Paragraph("20/09/2026", styles['TableCell']),
          Paragraph("Milton insulated water bottle", styles['TableCell']), Paragraph("Consented", styles['TableCell'])],
-        [Paragraph("G1", styles['TableCellBold']), Paragraph("Security Officer Gurpreet", styles['TableCell']),
+        [Paragraph("<b>Officer Gurpreet Singh</b>", styles['TableCellBold']), Paragraph("Security Gate Guard", styles['TableCell']),
          Paragraph("Block 34 Gate Counter", styles['TableCell']), Paragraph("21/09/2026", styles['TableCell']),
          Paragraph("6 unindexed black umbrellas", styles['TableCell']), Paragraph("Verified", styles['TableCell'])],
-        [Paragraph("G2", styles['TableCellBold']), Paragraph("Library Desk Supervisor", styles['TableCell']),
+        [Paragraph("<b>Staff Manjit Kumar</b>", styles['TableCellBold']), Paragraph("Library Desk Supervisor", styles['TableCell']),
          Paragraph("Central Library Desk", styles['TableCell']), Paragraph("22/09/2026", styles['TableCell']),
          Paragraph("Lost calculators in exam week", styles['TableCell']), Paragraph("Verified", styles['TableCell'])],
     ]
-    t_roster = Table(roster_data, colWidths=[30, 115, 115, 65, 140, 58])
+    t_roster = Table(roster_data, colWidths=[90, 105, 110, 60, 108, 50])
     t_roster.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, 0), PRIMARY_COLOR),
         ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
@@ -405,19 +405,19 @@ def build_cp2_pdf(output_path):
     story.append(Paragraph("2. Deep User Interview Insights (Section 11 Compliant)", styles['SectionHeading']))
     
     interviews = [
-        ("Participant S1 (Hosteller, 2nd Year CSE)", "Lost scientific calculator before mid-terms",
+        ("Rohan Verma (Hosteller, 2nd Year CSE)", "Lost scientific calculator before mid-terms",
          "\"I posted in 4 WhatsApp groups. Someone messaged me trying to claim my calculator just to get a free device. Because I posted a photo showing the front, anyone could claim they were the owner.\"",
          "Open public social broadcasts invite impostor fraud; students need hidden verification proof before handover."),
         
-        ("Participant S2 (Fresher Hosteller)", "Lost campus RFID ID card",
+        ("Simranjeet Kaur (Fresher Hosteller, 1st Year)", "Lost campus RFID ID card",
          "\"Every guard asked me for proof of identity, but my only identity card was the one I had lost. Without it, I couldn't enter the hostel mess or library for 4 days until re-issue.\"",
          "ID card loss creates an administrative deadlock cutting off food and library access."),
 
-        ("Participant S3 (Day Scholar, 3rd Year)", "Found bike keys with lanyard",
+        ("Aman Sharma (Day Scholar, 3rd Year)", "Found bike keys with lanyard",
          "\"I found bike keys near the stairs. I had class in 5 minutes, so I just left them on the counter. If there were a simple 1-minute way to log it, I would have reported it.\"",
          "Finders face severe time pressures between classes; lack of fast drop channels causes items to be left behind."),
 
-        ("Participant G1 (Senior Security Guard Gurpreet Singh)", "Manages physical collection box at Block 34",
+        ("Officer Gurpreet Singh (Senior Security Guard)", "Manages physical collection box at Block 34",
          "\"We have a cardboard box full of water bottles, notebooks, and keys under the table. When a student comes asking for a lost black umbrella, I have 6 black umbrellas. Without proof, I cannot give it away.\"",
          "Security staff are overwhelmed by identical items; they urgently need secret distinguishing proof to resolve claims.")
     ]
