@@ -210,9 +210,7 @@ def create_banner(title, subtitle, badge="INT335 SUBMISSION"):
     return t
 
 
-def build_cp1_full_pdf(output_path):
-    styles = get_styles()
-    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+def get_cp1_story(styles):
     story = []
 
     story.append(create_banner(
@@ -365,12 +363,17 @@ def build_cp1_full_pdf(output_path):
         ]))
         story.append(t_imgs)
 
+    return story
+
+def build_cp1_full_pdf(output_path):
+    styles = get_styles()
+    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+    story = get_cp1_story(styles)
     doc.build(story, canvasmaker=NumberedCanvas)
 
 
-def build_cp2_full_pdf(output_path):
-    styles = get_styles()
-    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+
+def get_cp2_story(styles):
     story = []
 
     story.append(create_banner(
@@ -581,12 +584,17 @@ def build_cp2_full_pdf(output_path):
         ]))
         story.append(t_outdoor)
 
+    return story
+
+def build_cp2_full_pdf(output_path):
+    styles = get_styles()
+    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+    story = get_cp2_story(styles)
     doc.build(story, canvasmaker=NumberedCanvas)
 
 
-def build_cp3_full_pdf(output_path):
-    styles = get_styles()
-    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+
+def get_cp3_story(styles):
     story = []
 
     story.append(create_banner(
@@ -704,12 +712,17 @@ def build_cp3_full_pdf(output_path):
     ]))
     story.append(t_hmw)
 
+    return story
+
+def build_cp3_full_pdf(output_path):
+    styles = get_styles()
+    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+    story = get_cp3_story(styles)
     doc.build(story, canvasmaker=NumberedCanvas)
 
 
-def build_cp4_full_pdf(output_path):
-    styles = get_styles()
-    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+
+def get_cp4_story(styles):
     story = []
 
     story.append(create_banner(
@@ -804,12 +817,17 @@ def build_cp4_full_pdf(output_path):
     ]))
     story.append(t_mat)
 
+    return story
+
+def build_cp4_full_pdf(output_path):
+    styles = get_styles()
+    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+    story = get_cp4_story(styles)
     doc.build(story, canvasmaker=NumberedCanvas)
 
 
-def build_cp5_full_pdf(output_path):
-    styles = get_styles()
-    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+
+def get_cp5_story(styles):
     story = []
 
     story.append(create_banner(
@@ -911,12 +929,17 @@ def build_cp5_full_pdf(output_path):
     ]))
     story.append(t_sc)
 
+    return story
+
+def build_cp5_full_pdf(output_path):
+    styles = get_styles()
+    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+    story = get_cp5_story(styles)
     doc.build(story, canvasmaker=NumberedCanvas)
 
 
-def build_cp6_full_pdf(output_path):
-    styles = get_styles()
-    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+
+def get_cp6_story(styles):
     story = []
 
     story.append(create_banner(
@@ -1029,12 +1052,17 @@ def build_cp6_full_pdf(output_path):
         ]))
         story.append(t_cp6_imgs2)
 
+    return story
+
+def build_cp6_full_pdf(output_path):
+    styles = get_styles()
+    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+    story = get_cp6_story(styles)
     doc.build(story, canvasmaker=NumberedCanvas)
 
 
-def build_cp7_full_pdf(output_path):
-    styles = get_styles()
-    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+
+def get_cp7_story(styles):
     story = []
 
     story.append(create_banner(
@@ -1154,7 +1182,14 @@ def build_cp7_full_pdf(output_path):
         story.append(t_m)
         story.append(Spacer(1, 4))
 
+    return story
+
+def build_cp7_full_pdf(output_path):
+    styles = get_styles()
+    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
+    story = get_cp7_story(styles)
     doc.build(story, canvasmaker=NumberedCanvas)
+
 
 
 def build_master_complete_pdf(output_path):
@@ -1162,20 +1197,20 @@ def build_master_complete_pdf(output_path):
     doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=38, bottomMargin=40)
     story = []
 
-    # Cover Page
-    story.append(Spacer(1, 30))
+    # 1. Master Dossier Cover Page
+    story.append(Spacer(1, 25))
     story.append(Paragraph("<font size=11 color='#2563eb'><b>LOVELY PROFESSIONAL UNIVERSITY</b></font>", styles['DocSubTitle']))
     story.append(Paragraph("<font size=9.5 color='#64748b'>School of Computer Science & Engineering · Academic Session 2026–27</font>", styles['DocSubTitle']))
-    story.append(Spacer(1, 10))
-    story.append(HRFlowable(width="100%", thickness=2, color=PRIMARY_COLOR, spaceAfter=15))
+    story.append(Spacer(1, 8))
+    story.append(HRFlowable(width="100%", thickness=2, color=PRIMARY_COLOR, spaceAfter=12))
     
     story.append(Paragraph("<font size=22 color='#1e3a8a'><b>INT335: DESIGN THINKING</b></font>", styles['DocTitle']))
-    story.append(Paragraph("<font size=13 color='#0f172a'><b>Comprehensive Course Project Dossier (Checkpoints 1 through 7)</b></font>", styles['DocTitle']))
-    story.append(Spacer(1, 6))
+    story.append(Paragraph("<font size=13 color='#0f172a'><b>Serial Master Coursework Dossier (Checkpoints 1 through 7)</b></font>", styles['DocTitle']))
+    story.append(Spacer(1, 4))
     story.append(Paragraph("<font size=11 color='#2563eb'><b>Project ID: P04 · Return Loop LPU: Campus Lost and Found support</b></font>", styles['DocSubTitle']))
-    story.append(Spacer(1, 15))
+    story.append(Spacer(1, 10))
 
-    # Live URL Box on Cover
+    # Live Links
     cov_links = [
         [Paragraph(f"<b>Live Web Prototype:</b> <font color='#2563eb'><u>{LIVE_URL}</u></font><br/><b>GitHub Repository:</b> <font color='#2563eb'><u>{GITHUB_URL}</u></font>", styles['TableCellBold'])]
     ]
@@ -1183,20 +1218,20 @@ def build_master_complete_pdf(output_path):
     t_cl.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), BG_ACCENT),
         ('BOX', (0, 0), (-1, -1), 0.5, SECONDARY_COLOR),
-        ('TOPPADDING', (0, 0), (-1, -1), 6),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+        ('TOPPADDING', (0, 0), (-1, -1), 5),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 5),
         ('LEFTPADDING', (0, 0), (-1, -1), 8),
         ('RIGHTPADDING', (0, 0), (-1, -1), 8),
     ]))
     story.append(t_cl)
-    story.append(Spacer(1, 15))
+    story.append(Spacer(1, 10))
 
-    # Metadata
+    # Course Metadata
     c_meta = [
-        [Paragraph("Course & Code", styles['TableCellBold']), Paragraph("INT335 · Design Thinking (2 Credits)", styles['TableCell'])],
+        [Paragraph("Course & Code", styles['TableCellBold']), Paragraph("INT335 — Design Thinking (2 Credits)", styles['TableCell'])],
         [Paragraph("Project Title", styles['TableCellBold']), Paragraph("Return Loop LPU: Campus Lost and Found support", styles['TableCell'])],
         [Paragraph("Domain / Focus", styles['TableCellBold']), Paragraph("Campus Lost-and-Found Recovery & Privacy Logistics across 600 Acres", styles['TableCell'])],
-        [Paragraph("Section & Team No.", styles['TableCellBold']), Paragraph("Section K212520 · Team 15", styles['TableCellBold'])],
+        [Paragraph("Section & Team No.", styles['TableCellBold']), Paragraph("Section K212520 — Team 15", styles['TableCellBold'])],
         [Paragraph("Course Faculty / Mentor", styles['TableCellBold']), Paragraph("Dr. Sarabjit Kaur", styles['TableCellBold'])],
         [Paragraph("Date of Approval", styles['TableCellBold']), Paragraph("30/10/2026 (Approved)", styles['BadgeApproved'])],
     ]
@@ -1204,16 +1239,15 @@ def build_master_complete_pdf(output_path):
     t_cm.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), BG_LIGHT),
         ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
-        ('TOPPADDING', (0, 0), (-1, -1), 4),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
+        ('TOPPADDING', (0, 0), (-1, -1), 3),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
         ('LEFTPADDING', (0, 0), (-1, -1), 6),
         ('RIGHTPADDING', (0, 0), (-1, -1), 6),
     ]))
     story.append(t_cm)
-    story.append(Spacer(1, 15))
+    story.append(Spacer(1, 10))
 
-    # Team Members Box
-    story.append(Paragraph("<b>Official Team Roster (Team 15)</b>", styles['SectionHeading']))
+    # Team Members
     c_team = [
         [Paragraph("#", styles['TableHeader']), Paragraph("Student Name", styles['TableHeader']), Paragraph("Registration No.", styles['TableHeader']), Paragraph("Designated Project Role", styles['TableHeader'])],
         [Paragraph("1", styles['TableCellBold']), Paragraph("<b>G. Bhuvanasai</b>", styles['TableCellBold']), Paragraph("12508429", styles['TableCell']), Paragraph("Project Lead & Full-Stack Prototyping", styles['TableCell'])],
@@ -1226,139 +1260,61 @@ def build_master_complete_pdf(output_path):
         ('BACKGROUND', (0, 0), (-1, 0), PRIMARY_COLOR),
         ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
         ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, BG_LIGHT]),
-        ('TOPPADDING', (0, 0), (-1, -1), 4),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
+        ('TOPPADDING', (0, 0), (-1, -1), 3),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
         ('LEFTPADDING', (0, 0), (-1, -1), 6),
         ('RIGHTPADDING', (0, 0), (-1, -1), 6),
     ]))
     story.append(t_ct)
-    story.append(Spacer(1, 20))
+    story.append(Spacer(1, 10))
 
-    # Executive Summary Box
-    story.append(Paragraph("<b>Executive Summary & Novelty Statement</b>", styles['SectionHeading']))
-    story.append(Paragraph(
-        "ReturnLoop LPU is a privacy-first, zero-cost campus lost-and-found recovery network engineered for Lovely Professional University's 600-acre campus. It eliminates the root causes of campus lost property failure: (1) Fear of fraud and phone harassment caused by broadcasting on informal WhatsApp/Instagram boards, (2) Time friction preventing hurried finders from traveling across campus between lectures, and (3) Inability of campus security guards to verify ownership of identical items. Featuring an automated 5-trait similarity matching engine, privacy-masked listings, secret identifier verification, and complete 7 Indian regional languages localization, ReturnLoop slashes item recovery time from 4 days to under 2 hours with zero university budget expenditure.",
-        styles['BodyDark']
-    ))
+    # Serial Table of Contents
+    story.append(Paragraph("<b>Serial Table of Checkpoints in this Dossier</b>", styles['SectionHeading']))
+    toc_data = [
+        [Paragraph("Sequence", styles['TableHeader']), Paragraph("Checkpoint Title", styles['TableHeader']), Paragraph("Key Contents & Empirical Deliverables", styles['TableHeader'])],
+        [Paragraph("<b>Checkpoint 1</b>", styles['TableCellBold']), Paragraph("Project Registration & Approval", styles['TableCellBold']), Paragraph("Annexure A sheets, team roster, scope boundaries, mentor approval signoff.", styles['TableCell'])],
+        [Paragraph("<b>Checkpoint 2</b>", styles['TableCellBold']), Paragraph("Empathy Research & Field Logs", styles['TableCellBold']), Paragraph("8 qualitative interviews, 3 signed consent forms, 7 empirical field photos.", styles['TableCell'])],
+        [Paragraph("<b>Checkpoint 3</b>", styles['TableCellBold']), Paragraph("Problem Definition & Personas", styles['TableCellBold']), Paragraph("Point of View (POV) statement, Aarav & Priya personas, prioritized HMWs.", styles['TableCell'])],
+        [Paragraph("<b>Checkpoint 4</b>", styles['TableCellBold']), Paragraph("Ideation & Selection Matrix", styles['TableCellBold']), Paragraph("32 divergent ideas, SCAMPER analysis, 2x2 feasibility/impact matrix.", styles['TableCell'])],
+        [Paragraph("<b>Checkpoint 5</b>", styles['TableCellBold']), Paragraph("Prototype Ready & User Flows", styles['TableCellBold']), Paragraph("Storyboard, user flow, paper prototype, working web app on Vercel.", styles['TableCell'])],
+        [Paragraph("<b>Checkpoint 6</b>", styles['TableCellBold']), Paragraph("Testing & Fixing Logs", styles['TableCellBold']), Paragraph("6 campus user tests, 4 engineering fixes in code, empirical testing photos.", styles['TableCell'])],
+        [Paragraph("<b>Checkpoint 7</b>", styles['TableCellBold']), Paragraph("Final Showcase & Annexure C", styles['TableCellBold']), Paragraph("12-slide script, NABC business model, 4 signed individual contribution sheets.", styles['TableCell'])],
+    ]
+    t_toc = Table(toc_data, colWidths=[85, 180, 245])
+    t_toc.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), SECONDARY_COLOR),
+        ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, BG_LIGHT]),
+        ('TOPPADDING', (0, 0), (-1, -1), 3),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+        ('LEFTPADDING', (0, 0), (-1, -1), 5),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 5),
+    ]))
+    story.append(t_toc)
 
-    # Scans on Page 2
+    # Serial append of all 7 Checkpoints!
     story.append(PageBreak())
-    story.append(Paragraph("Annexure A · Approved Registration Sheet Scans", styles['SectionHeading']))
-    img_p59 = os.path.join(SUBMISSIONS_DIR, "01_CP1_Project_Approval", "Annexure_A_Signed_Page_59.jpg")
-    img_p60 = os.path.join(SUBMISSIONS_DIR, "01_CP1_Project_Approval", "Annexure_A_Signed_Page_60.jpg")
-    if os.path.exists(img_p59) and os.path.exists(img_p60):
-        t_imgs = Table([
-            [Paragraph("<b>Page 59: Roster & Details</b>", styles['TableCellBold']), Paragraph("<b>Page 60: Mentor Approval Signatures</b>", styles['TableCellBold'])],
-            [Image(img_p59, width=250, height=360), Image(img_p60, width=250, height=360)]
-        ], colWidths=[260, 263])
-        t_imgs.setStyle(TableStyle([
-            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-            ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
-            ('BACKGROUND', (0, 0), (-1, 0), BG_LIGHT),
-            ('TOPPADDING', (0, 0), (-1, -1), 4),
-            ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
-        ]))
-        story.append(t_imgs)
+    story.extend(get_cp1_story(styles))
 
-    # Page 3: Empathy Evidence & Field Signing Photos
     story.append(PageBreak())
-    story.append(create_banner(
-        "Checkpoint 2: Empathy Research & Participant Signatures",
-        "Empirical Evidence of Physical Consent Forms Signed by Campus Students | INT335",
-        "EMPATHY RESEARCH EVIDENCE"
-    ))
-    story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceAfter=8))
-    story.append(Paragraph("<b>Empirical Field Photography: Participants Completing Official Consent Forms</b>", styles['SectionHeading']))
-    
-    p_cp2 = os.path.join(SUBMISSIONS_DIR, "02_CP2_Empathy_Research")
-    p1 = os.path.join(p_cp2, "Field_Photo_1_Participant_Signing_1.jpg")
-    p2 = os.path.join(p_cp2, "Field_Photo_2_Participant_Signing_2.jpg")
-    p3 = os.path.join(p_cp2, "Field_Photo_3_Participant_Signing_3.jpg")
+    story.extend(get_cp2_story(styles))
 
-    if os.path.exists(p1) and os.path.exists(p2) and os.path.exists(p3):
-        t_signs = Table([
-            [Paragraph("<b>Participant 1: Rohan Verma</b><br/>2nd Yr CSE · BH-4 Hosteller", styles['TableCellBold']),
-             Paragraph("<b>Participant 2: Simranjeet Kaur</b><br/>1st Yr CSE · GH-2 Fresher", styles['TableCellBold']),
-             Paragraph("<b>Participant 3: Aman Sharma</b><br/>3rd Yr Mech · Day Scholar", styles['TableCellBold'])],
-            [Image(p1, width=165, height=260), Image(p2, width=165, height=260), Image(p3, width=165, height=260)],
-            [Paragraph("Physically filling and signing consent form for calculator loss interview.", styles['TableCell']),
-             Paragraph("Signing consent form regarding RFID ID card recovery and privacy.", styles['TableCell']),
-             Paragraph("Completing consent form and testing public vs secret proof fields.", styles['TableCell'])]
-        ], colWidths=[174, 174, 175])
-        t_signs.setStyle(TableStyle([
-            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-            ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
-            ('BACKGROUND', (0, 0), (-1, 0), BG_LIGHT),
-            ('BACKGROUND', (0, 2), (-1, 2), BG_LIGHT),
-            ('TOPPADDING', (0, 0), (-1, -1), 3),
-            ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
-        ]))
-        story.append(t_signs)
-        story.append(Spacer(1, 10))
-
-    # Page 4: Usability Testing Evidence Photos
     story.append(PageBreak())
-    story.append(create_banner(
-        "Checkpoint 6: Usability Testing & Iteration Evidence",
-        "Empirical Photos of On-Campus Usability Testing Sessions Across Student Hubs | INT335",
-        "USABILITY TESTING EVIDENCE"
-    ))
-    story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceAfter=8))
-    story.append(Paragraph("<b>Empirical Field Photography: Interactive Prototype Evaluation on Campus</b>", styles['SectionHeading']))
+    story.extend(get_cp3_story(styles))
 
-    p_cp6 = os.path.join(SUBMISSIONS_DIR, "06_CP6_Testing_and_Fixing")
-    p4 = os.path.join(p_cp6, "Field_Photo_4_Team_Interview_Indoor_1.jpg")
-    p6 = os.path.join(p_cp6, "Field_Photo_6_Campus_Interview_Outdoor_1.jpg")
-
-    if os.path.exists(p4) and os.path.exists(p6):
-        t_master_tests = Table([
-            [Paragraph("<b>Indoor Usability Walkthrough (Hostel Study Area)</b>", styles['TableCellBold']),
-             Paragraph("<b>Outdoor Campus Transit Corridor Usability Test</b>", styles['TableCellBold'])],
-            [Image(p4, width=250, height=330), Image(p6, width=250, height=330)],
-            [Paragraph("Student evaluating quick-reporting workflow and verification tooltips.", styles['TableCell']),
-             Paragraph("Student testing mobile responsiveness and filter usability near campus drop zones.", styles['TableCell'])]
-        ], colWidths=[260, 263])
-        t_master_tests.setStyle(TableStyle([
-            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-            ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
-            ('BACKGROUND', (0, 0), (-1, 0), BG_LIGHT),
-            ('BACKGROUND', (0, 2), (-1, 2), BG_LIGHT),
-            ('TOPPADDING', (0, 0), (-1, -1), 4),
-            ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
-        ]))
-        story.append(t_master_tests)
-
-    # Page 5: Prototype Diagrams
     story.append(PageBreak())
-    story.append(create_banner(
-        "Checkpoint 5: Prototype Ready & UI Architecture",
-        "Complete System Storyboard & End-to-End User Flow Architecture | INT335",
-        "PROTOTYPE ARCHITECTURE"
-    ))
-    story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceAfter=8))
-    
-    p_cp5 = os.path.join(SUBMISSIONS_DIR, "05_CP5_Prototype_Ready")
-    img_sb = os.path.join(p_cp5, "storyboard.png")
-    img_uf = os.path.join(p_cp5, "user_flow.png")
-    if os.path.exists(img_sb) and os.path.exists(img_uf):
-        t_proto_imgs = Table([
-            [Paragraph("<b>Campus Storyboard (The Lost-to-Found Journey)</b>", styles['TableCellBold'])],
-            [Image(img_sb, width=500, height=210)],
-            [Paragraph("<b>End-to-End User Flow Architecture & Handoff Logic</b>", styles['TableCellBold'])],
-            [Image(img_uf, width=500, height=210)]
-        ], colWidths=[523])
-        t_proto_imgs.setStyle(TableStyle([
-            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-            ('GRID', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
-            ('BACKGROUND', (0, 0), (-1, 0), BG_LIGHT),
-            ('BACKGROUND', (0, 2), (-1, 2), BG_LIGHT),
-            ('TOPPADDING', (0, 0), (-1, -1), 3),
-            ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
-        ]))
-        story.append(t_proto_imgs)
+    story.extend(get_cp4_story(styles))
+
+    story.append(PageBreak())
+    story.extend(get_cp5_story(styles))
+
+    story.append(PageBreak())
+    story.extend(get_cp6_story(styles))
+
+    story.append(PageBreak())
+    story.extend(get_cp7_story(styles))
 
     doc.build(story, canvasmaker=NumberedCanvas)
-
 
 def main():
     print("Generating rich, comprehensive, academic-grade PDFs for all checkpoints...")
