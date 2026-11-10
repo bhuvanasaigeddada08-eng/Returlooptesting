@@ -110,20 +110,22 @@ Speaker Notes: ReturnLoop is built on 5 pillars: 5-trait similarity matching, pr
 
 --------------------------------------------------------------------------------
 
-SLIDE 7: PROTOTYPE & USER FLOW: PAPER MOCKUPS TO LIVE PWA
-Subtitle: From Low-Fidelity Paper Sketches to Functional Web Deployment
+SLIDE 7: WORKING PROTOTYPE & LIVE DEPLOYMENT DEMO
+Subtitle: Interactive Full-Stack Web App Live at: https://returlooptesting-khwd.vercel.app/
 
-### Storyboard & Architecture
-• 6-Panel Storyboard: Loss Event in Lab ➔ Instant 42s Mobile Report ➔ Trait Auto-Match ➔ Alert Notification ➔ Security Desk Verification ➔ Safe Handover.
-• Tech Stack: React 18 + Vite + Tailwind CSS + Python Flask API.
-• Live Deployment URL: https://returlooptesting-khwd.vercel.app/
+### Live Production Application (Click to Open)
+LIVE DEPLOYED WEB APP: <font color='#2563eb' size=10><u>https://returlooptesting-khwd.vercel.app/
+GitHub: https://github.com/bhuvanasaigeddada08-eng/Returlooptesting.git
+Architecture: Mobile-First React 18 + Vite + Tailwind CSS + Flask API.
+Core Capabilities: Sub-45s fast reporting, privacy-masked campus feeds, instant 5-trait similarity auto-matching.
 
-### Embedded User Flow & Screens
-• Loser Path: Selects category, enters model, inputs secret proof (RV initials on battery cover).
-• Finder Path: Snaps photo at UniMall stairs, selects drop location, submits in &lt; 45s.
-• Security Path: Compares physical item with owner's encrypted digital proof.
+### Interactive End-to-End User Flows & Features
+7 Regional Languages: Full UI toggles in Hindi, Punjabi, Telugu, Tamil, Bengali, Marathi, and English.
+Secret Identifier Proof: Encrypted field for serial numbers, engravings & lock screens.
+Campus Security Desk: Digital handover verification portal with zero paperwork.
+100% Responsive: Optimized for Android, iOS Safari & desktop browsers.
 
-Speaker Notes: We tested on paper first, then developed the responsive web app deployed live on Vercel. Finders report in 45 seconds, and owners verify claims with security guards.
+Speaker Notes: Our working prototype is fully built and deployed live on Vercel at https://returlooptesting-khwd.vercel.app/. Anyone on campus can test it immediately on their smartphone. Finders can report found items in under 45 seconds, and owners verify claims with security guards safely.
 
 --------------------------------------------------------------------------------
 

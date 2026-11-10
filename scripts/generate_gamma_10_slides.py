@@ -216,13 +216,13 @@ def generate_pdf():
         # Slide 7
         {
             "num": "7",
-            "title": "Prototype & User Flow: Paper Mockups to Live PWA",
-            "sub": "From Low-Fidelity Paper Sketches to Functional Web Deployment",
-            "left_head": "Storyboard & Architecture",
-            "left_body": "• <b>6-Panel Storyboard:</b> Loss Event in Lab ➔ Instant 42s Mobile Report ➔ Trait Auto-Match ➔ Alert Notification ➔ Security Desk Verification ➔ Safe Handover.<br/>• <b>Tech Stack:</b> React 18 + Vite + Tailwind CSS + Python Flask API.<br/>• <b>Live Deployment URL:</b> <font color='#2563eb'><u>https://returlooptesting-khwd.vercel.app/</u></font>",
-            "right_head": "Embedded User Flow & Screens",
-            "right_body": "• <b>Loser Path:</b> Selects category, enters model, inputs secret proof (RV initials on battery cover).<br/>• <b>Finder Path:</b> Snaps photo at UniMall stairs, selects drop location, submits in &lt; 45s.<br/>• <b>Security Path:</b> Compares physical item with owner's encrypted digital proof.",
-            "notes": "We tested on paper first, then developed the responsive web app deployed live on Vercel. Finders report in 45 seconds, and owners verify claims with security guards."
+            "title": "Working Prototype & Live Deployment Demo",
+            "sub": "Interactive Full-Stack Web App Live at: https://returlooptesting-khwd.vercel.app/",
+            "left_head": "Live Production Application (Click to Open)",
+            "left_body": "<b>LIVE DEPLOYED WEB APP:</b> <font color='#2563eb' size=10><b><u>https://returlooptesting-khwd.vercel.app/</u></b></font><br/><b>GitHub:</b> <font color='#2563eb'><u>https://github.com/bhuvanasaigeddada08-eng/Returlooptesting.git</u></font><br/><b>Architecture:</b> Mobile-First React 18 + Vite + Tailwind CSS + Flask API.<br/><b>Core Capabilities:</b> Sub-45s fast reporting, privacy-masked campus feeds, instant 5-trait similarity auto-matching.",
+            "right_head": "Interactive End-to-End User Flows & Features",
+            "right_body": "<b>7 Regional Languages:</b> Full UI toggles in Hindi, Punjabi, Telugu, Tamil, Bengali, Marathi, and English.<br/><b>Secret Identifier Proof:</b> Encrypted field for serial numbers, engravings & lock screens.<br/><b>Campus Security Desk:</b> Digital handover verification portal with zero paperwork.<br/><b>100% Responsive:</b> Optimized for Android, iOS Safari & desktop browsers.",
+            "notes": "Our working prototype is fully built and deployed live on Vercel at https://returlooptesting-khwd.vercel.app/. Anyone on campus can test it immediately on their smartphone. Finders can report found items in under 45 seconds, and owners verify claims with security guards safely."
         },
         # Slide 8
         {
