@@ -248,3 +248,4 @@
 3. **While your friends are doing photos and interviews:**
    - You can submit all preliminary checkpoint text, problem statements, persona templates, ideation logs, and prototype links.
    - As your friends hand you real interview recordings/photos, you can append them into the appendices of CP2 and CP6!
+

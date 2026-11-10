@@ -28,3 +28,4 @@ Theme 4 (ReturnLoop LPU Platform) was selected with the highest score (5.0 / 5.0
 - Unlike Theme 1 (Smart Lockers), it requires ₹0 capital expenditure and zero hardware installation.
 - Unlike Theme 2 (P2P Chat), it completely prevents impostor fraud by masking private identifying details and enforcing hidden proof verification.
 - Unlike Theme 3 (Cloud AI), it does not rely on costly external cloud APIs or high-bandwidth uploads, operating reliably on standard university infrastructure with 7 Indian languages.
+

@@ -1,40 +1,52 @@
 ================================================================================
-INT335 DESIGN THINKING — CHECKPOINT 1 (CP1) SUBMISSION ANSWERS
-Google Form Link: forms.gle/3whaWAWZ3s6otVJ3A
+INT335 · CHECKPOINT 1 (CP1) SUBMISSION FORM - COPY & PASTE ANSWERS
+Submission URL: forms.gle/3whaWAWZ3s6otVJ3A
 ================================================================================
 
-[FIELD: Project ID]
-P04
+1. Section:
+K212520
 
-[FIELD: Project Title]
-Lost on a 600-Acre Campus: Rethinking Lost and Found
+2. Team Number:
+Team 15
 
-[FIELD: Domain]
-Campus Services / Digital Student Services
+3. Mentor Name:
+Dr. Sarabjit Kaur
 
-[FIELD: Problem Space (v1) — No Technology Named]
-Students, faculty, and administrative staff who misplace vital belongings—such as student smart ID cards, laptops, calculators, vehicle keys, and wallets—across LPU's 600-acre campus face a high rate of permanent loss, extreme academic anxiety, and privacy risks. Simultaneously, honest finders and security personnel who discover items have no standardized, trustworthy, or low-effort channel to report or hand over recovered items, leading to unclaimed physical stockpiles at security posts and unmoderated social media posts where personal contact numbers are exposed.
+4. Date of Approval:
+30/10/26
 
-[FIELD: Target User Group — Specific, not "all students"]
-LPU hostellers and day scholars who carry high-value items across academic blocks (Blocks 32, 34, 36, Central Library, UniMall) and campus security guards/help-desk staff stationed at gate counters who accumulate unclaimed items.
+5. Project ID:
+P04 - Lost on 600-Acre campus
 
-[FIELD: Field Sites the Team Can Physically Reach]
-1. Central Library Ground Floor Security Desk and 2nd Floor Reading Room
-2. Block 34 (Computer Science Building) Ground Floor Foyer & Security Post
-3. UniMall Food Court & Central Courtyard Seating Area
+6. Project Title:
+Return Loop LPU: Campus Lost and Found support
 
-[FIELD: The 5 Mandatory Approval Questions]
-1. Can you reach it?
-YES — Our team members attend classes daily in Block 34, study in Central Library, and visit UniMall; we can physically observe and interview students and staff in person.
+7. Team Members & Roles:
+- Member 1 (Lead): G. Bhuvanasai (Reg: 12508429) - Role: Project lead
+- Member 2: Abin Raj MR (Reg: 12509293) - Role: Research
+- Member 3: Adarsh (Reg: 12517821) - Role: Testing
+- Member 4: Piyush Mehra (Reg: 12509335) - Role: Presentation
 
-2. Who exactly?
-YES — (1) Students who have lost or found items in the last 6 months, and (2) Campus security guards and library desk caretakers managing lost property boxes.
+8. Problem Space (v1) [No technology named]:
+Students who lose personal belongings on campus after often struggles to share reliable information about lost & found items
 
-3. Problem, not solution?
-YES — The problem describes the communication void, anxiety, false claims, and privacy exposure during item loss, without prescribing any software, website, or hardware.
+9. Target User Group [Specific, not "all students"]:
+LPU students who lost (or) found personal belongings on campus especially hostel and resident and students using classrooms.
 
-4. Safe to research?
-YES — No student ID numbers, passwords, room numbers, or financial details are collected. Verbal consent is obtained before all conversations, and interviews are conducted in the participant's preferred language (English, Hindi, Punjabi).
+10. Field Site(s) the Team Can Physically Reach:
+LPU campus hostels, academic blocks, laboratories library cafeteria and campus security (or) lost property check
 
-5. Can you prototype it?
-YES — Low-fidelity paper wireframes, claim forms, and physical cardboard drop-point mockups can be drawn and role-played in a single afternoon sitting.
+11. The Five Questions Checklist:
+[X] 1. Can you reach it? -> YES
+[X] 2. Who exactly? -> YES
+[X] 3. Problem, not solution? -> YES
+[X] 4. Safe to research? -> YES
+[X] 5. Can you prototype it? -> YES
+
+12. Mentor Decision:
+Approved (Signed by Dr. Sarabjit Kaur on 30/10/2026)
+
+13. Attachments to upload to Google Form:
+- Annexure_A_Signed_Page_59.jpg (Attached in folder: INT335_SUBMISSIONS/01_CP1_Project_Approval/)
+- Annexure_A_Signed_Page_60.jpg (Attached in folder: INT335_SUBMISSIONS/01_CP1_Project_Approval/)
+================================================================================

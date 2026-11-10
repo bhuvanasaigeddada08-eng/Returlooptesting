@@ -26,3 +26,4 @@ Re-tested with Participant T1 and Participant T4.
 - Participant T1 easily selected Hindi and completed the claim in 42 seconds (compared to 110 seconds previously).
 - Participant T4 verified that the reference code was immediately visible on the dashboard and claim receipt.
 All 4 identified issues were validated as resolved.
+

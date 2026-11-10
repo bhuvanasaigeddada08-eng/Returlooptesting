@@ -99,3 +99,4 @@
   - *"Every exam week, students bring 5 to 10 lost calculators and glasses. Matching them to the real owner is impossible because they all look identical."*
   - *"If a student could show me a verified digital receipt or match code on their phone, it would take me 5 seconds to hand over the item safely."*
 - **Key Insights:** Institutional staff crave a lightweight digital verification handshake to eliminate dispute liability and protect student belongings.
+

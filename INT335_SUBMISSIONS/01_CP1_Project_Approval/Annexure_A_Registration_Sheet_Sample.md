@@ -1,56 +1,72 @@
-# Annexure A · Project Registration Sheet
+# Annexure A · Official Signed Project Registration Sheet
 **Course:** INT335 · Design Thinking · 2 Credits  
 **Session:** 2026–27 | School of Computer Science & Engineering, Lovely Professional University  
 
-| Field | Detail |
+> **Note:** The signed physical registration sheet approved by mentor **Dr. Sarabjit Kaur** on **30/10/26** is scanned and available in this folder:
+> - **Page 59:** [Annexure_A_Signed_Page_59.jpg](Annexure_A_Signed_Page_59.jpg)
+> - **Page 60:** [Annexure_A_Signed_Page_60.jpg](Annexure_A_Signed_Page_60.jpg)
+
+---
+
+### Project Registration Metadata
+
+| Field | Official Value (From Signed Sheet) |
 |---|---|
-| **Section** | CSE Allied Sections |
-| **Team No.** | Team 04 |
-| **Mentor Name** | (Assigned Course Faculty) |
-| **Date** | August 2026 / Checkpoint 1 |
-| **Project ID** | P04 |
-| **Project Title** | Lost on a 600-Acre Campus: Rethinking Lost and Found |
+| **Section** | K212520 |
+| **Team No.** | Team 15 |
+| **Mentor** | Dr. Sarabjit Kaur |
+| **Date** | 30/10/26 |
+| **Project ID** | P04 - Lost on 600-Acre campus |
+| **Session** | 2026–27 |
+| **Project Title** | Return Loop LPU: Campus Lost and Found support |
 
 ---
 
 ### Team Roster
 
-| # | Name | Registration No. | Role Held | Signature |
-|---|---|---|---|---|
-| 1 | Bhuvanasai Geddada | (Your Reg. No.) | Team Lead & Full-Stack Prototyping | [Signed] |
-| 2 | Team Member 2 | (Reg. No.) | Research & Design Lead | [Signed] |
-| 3 | Team Member 3 | (Reg. No.) | Prototype & Testing Lead | [Signed] |
-| 4 | Team Member 4 | (Reg. No.) | Documentation Lead | [Signed] |
+| # | Name | Registration No. | Role Held | Signature Status |
+|---|---|---|---|:---:|
+| 1 | **G. Bhuvanasai** | 12508429 | Project lead | Signed (`30/10/26`) |
+| 2 | **Abin Raj MR** | 12509293 | Research | Signed |
+| 3 | **Adarsh** | 12517821 | Testing | Signed |
+| 4 | **Piyush Mehra** | 12509335 | Presentation | Signed |
 
 ---
 
 ### Problem Space (v1)
-*Written strictly as a problem, with no technology or solution named:*
+*(As handwritten and approved on page 59 — written strictly as a problem, with no technology or solution named)*:
 
-Students and staff moving between lecture halls, laboratories, food courts, and residential hostels across LPU's vast 600-acre campus experience frequent, high-stakes loss of personal belongings. Because no unified, visible, and privacy-respecting recovery system exists, finders do not know where to safely hand over items within their short class breaks, while losers are forced to publicize their personal contact details on chaotic social media confession boards, exposing them to false claims and harassment.
+> *"Students who lose personal belongings on campus after often struggles to share reliable information about lost & found items"*
 
 ---
 
 ### Target User Group
-*Specific, not "all students":*
-- Students carrying portable academic equipment (scientific calculators, smart cards, laptops, glasses, keys) across Blocks 32–38 and Central Library.
-- Security desk guards and library staff who accumulate physical lost property boxes.
+*(Specific, not "all students")*:
+
+> *"LPU students who lost (or) found personal belongings on campus especially hostel and resident and students using classrooms."*
 
 ---
 
-### Field Sites Physically Reachable
-1. Central Library (Ground Floor Security Counter & Reading Halls)
-2. Block 34 (Main Entrance Security Checkpoint)
-3. UniMall (Central Food Court & Escalator Zone)
+### Field Site(s) the Team Can Physically Reach
+
+> *"LPU campus hostels, academic blocks, laboratories library cafeteria and campus security (or) lost property check"*
 
 ---
 
-### The Five Mandatory Checkpoint Questions
+### The Five Questions & Verification
 
-| # | Question | Evidence / Explanation | Mentor Check |
-|---|---|---|:---:|
-| 1 | **Can you reach it?** | Our members attend classes in Block 34 and study in Central Library daily; we can observe desks and conduct face-to-face interviews immediately. | [x] YES |
-| 2 | **Who exactly?** | Focuses on students who lost/found belongings in the past semester, and campus security staff who manage physical collection boxes. | [x] YES |
-| 3 | **Problem, not solution?** | Focuses entirely on communication breakdown, fear of fraud, and privacy risks. No app, website, or hardware is named. | [x] YES |
-| 4 | **Safe to research?** | No passwords, ID numbers, or financial details requested. Real identities are protected using fake codes (e.g. Hosteller H1, Guard G1). Consent taken in native language. | [x] YES |
-| 5 | **Can you prototype it?** | Low-fidelity paper screens, paper claim slips, and mock drop boxes can be built and evaluated in a single session. | [x] YES |
+| # | The Question | Answer / Evidence Provided | YES | NO |
+|---|---|---|:---:|:---:|
+| 1 | **Can you reach it?** Name the users you can watch and interview by the end of Week 5. | LPU hostellers, day scholars in classroom blocks, laboratory assistants, and campus security staff. | **[X]** | [ ] |
+| 2 | **Who exactly?** Name the specific group of people. | LPU students who lose or find personal belongings on campus, specifically hostel residents and students moving between academic blocks. | **[X]** | [ ] |
+| 3 | **Problem, not solution?** Confirm no app, website, or system is named above. | Confirmed. Stated strictly as an information sharing and recovery friction problem; no app, website, or technology is mentioned. | **[X]** | [ ] |
+| 4 | **Safe to research?** No personal details collected, and consent can be asked for in the person's own language. | Yes. No sensitive or financial data collected; participant consent obtained with voluntary participation and anonymized records. | **[X]** | [ ] |
+| 5 | **Can you prototype it?** Something testable could be built on paper in one sitting. | Yes. Low-fidelity paper claim tickets, verification flows, and category forms can be drafted and tested immediately. | **[X]** | [ ] |
+
+---
+
+### Mentor Decision & Signatures (Page 60)
+
+- **Decision:** **[X] Approved**
+- **Team Lead Signature & Date:** Signed by *G. Bhuvanasai* (`30/10/26`)
+- **Mentor Signature & Date:** Signed by *Dr. Sarabjit Kaur* (`30/10/2026`)

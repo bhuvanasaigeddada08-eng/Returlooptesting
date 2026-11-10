@@ -51,3 +51,4 @@
 | **Feasibility & Speed** | 25% | 1 / 5 (Approval bottlenecks) | 5 / 5 (Instant setup) | 2 / 5 (Training data complexity) | **5 / 5 (Production-ready web/mobile)** |
 | **Inclusivity (7 Languages)** | 20% | 2 / 5 (Monolingual displays) | 2 / 5 (Informal slang only) | 3 / 5 (English biased) | **5 / 5 (7 Indian languages + Voice)** |
 | **Weighted Total** | **100%** | **2.10 / 5.0** | **3.15 / 5.0** | **2.50 / 5.0** | **5.00 / 5.0 (WINNER)** |
+

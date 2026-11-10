@@ -29,3 +29,4 @@ The prototype was developed iteratively, starting from paper sketches and progre
 2. **Task 2 (Accessibility):** *"Change the language of the application to your native language (Hindi, Telugu, or Punjabi)."*
 3. **Task 3 (Claim Submission):** *"Submit an ownership claim for an item, describing a secret mark only you would know."*
 4. **Task 4 (Admin Handover):** *"As security desk staff, verify the claim and approve the handover."*
+

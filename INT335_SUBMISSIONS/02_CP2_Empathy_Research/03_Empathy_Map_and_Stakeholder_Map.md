@@ -32,3 +32,4 @@
 | **Core Users (Finders)** | Honest students, campus cleaners, library visitors | Good intentions, but constrained by 10-minute class break windows and fear of false blame. |
 | **Custodians (Gatekeepers)**| Campus security guards, library counter supervisors, hostel wardens | Overburdened with paperwork; fear liability of handing items to wrongful claimants. |
 | **Institutional Stakeholders**| LPU Administration, Student Welfare Office, Security Division | Interested in campus safety, reducing student anxiety, preventing theft disputes. |
+

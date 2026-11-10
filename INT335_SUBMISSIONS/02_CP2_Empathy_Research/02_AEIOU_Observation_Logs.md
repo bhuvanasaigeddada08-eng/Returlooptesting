@@ -35,3 +35,4 @@
 ## Key Synthesis from Fieldwork:
 1. **The Handover Black Hole:** Once an item is handed to a guard or desk, it enters an unindexed physical void.
 2. **The Verification Dilemma:** Without structured metadata (brand, color, hidden distinguishing marks), neither the guard nor the library staff can safely release high-value items.
+

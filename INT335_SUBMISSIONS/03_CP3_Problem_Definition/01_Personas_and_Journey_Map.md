@@ -55,3 +55,4 @@ Stage 6: RESIGNATION
 • Action: Abandons search; borrows calculator for exam; pays replacement fine.
 • Emotion: Defeated.
 ```
+

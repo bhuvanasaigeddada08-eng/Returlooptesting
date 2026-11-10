@@ -26,3 +26,4 @@ ReturnLoop LPU is a privacy-preserving, zero-cost university lost-and-found reco
 - Approach: Decentralized web/mobile platform with trait matching, hidden proof verification, and campus security admin governance in 7 languages at ₹0 cost.
 - Benefit: Rapid recovery, total privacy protection, zero fraud, and zero cost.
 - Competition: Superior to unindexed WhatsApp groups, slow UMS ticketing, and fragile paper notice boards.
+

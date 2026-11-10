@@ -62,3 +62,4 @@
 | **#2** | iOS WebKit header trapping | **High** | Replaced inline modal with React `createPortal` and safe-area insets (`env(safe-area-inset-top)`). | Tester T3 verified zero clipping on iPhone. |
 | **#3** | Missing photo error | **Medium** | Implemented backend category-driven smart image resolution and sleek verified SVG placeholders. | All items display crisp visual previews. |
 | **#4** | Gate handover verification | **Medium** | Added standardized tracking reference codes (`RL-LOST-2026-XXXXXX`) visible on cards and claim receipts. | Security guard approved claim in under 10 seconds. |
+

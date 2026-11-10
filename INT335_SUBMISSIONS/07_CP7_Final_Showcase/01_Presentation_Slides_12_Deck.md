@@ -3,7 +3,7 @@
 ## Slide 1: Title & Team
 - **Title:** ReturnLoop LPU — Rethinking Lost and Found on a 600-Acre Campus
 - **Project ID:** P04 (Domain: Campus Services)
-- **Team Members:** Bhuvanasai Geddada (Team Lead) & Team 04
+- **Team Members:** G. Bhuvanasai (Lead · 12508429), Abin Raj MR (Research · 12509293), Adarsh (Testing · 12517821), Piyush Mehra (Presentation · 12509335) · Team 15 (Section K212520)
 - **One-Line Problem:** *“Across 600 acres, lost items rarely return, while searching exposes students to fraud, spam, and privacy loss.”*
 
 ## Slide 2: The Problem
@@ -54,3 +54,4 @@
 - **What Failed:** Early assumption that students would install a separate heavy native app (web prototype with responsive mobile portal proved far more effective).
 - **Future Scope:** Campus smart locker integration and automated CCTV timeline cross-referencing.
 - **NABC Close:** *“ReturnLoop transforms LPU’s 600-acre lost-and-found from a chaotic, privacy-leaking WhatsApp broadcast into a secure, zero-cost, verified campus recovery ecosystem.”*
+
